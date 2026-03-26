@@ -1,0 +1,56 @@
+<global-filters
+  [dashboardInstance]="dashboard_instance"
+  (globalSearch)="searchByGlobalFilters($event)"
+></global-filters>
+<br />
+<h3 class="black-text" *ngIf="!isMobile">
+  Visualizza su
+  <select title="cols" name="cols" id="cols" [(ngModel)]="cols" (change)="selectionChange($event)">
+    <option *ngFor="let c of colsOptions" [value]="c">{{c}}</option>
+  </select>
+  colonne
+</h3>
+<h4>
+  Per la disponibilità dei dati sulla fatturazione, i dati di questa dashboard vengono aggiornati
+  ogni 10 del mese.
+</h4>
+<div *ngIf="kpis.length > 0">
+  <mat-grid-list cols="{{cols}}" rowHeight="{{rowHeight}}px" gutterSize="15px">
+    <mat-grid-tile
+      *ngFor="let kpi of kpis; let i = index;"
+      [colspan]="kpi.data.cols"
+      [rowspan]="kpi.data.rows"
+    >
+      <cdk-drop-list [cdkDropListConnectedTo]="drops" [cdkDropListData]="i">
+        <mat-card
+          cdkDrag
+          (cdkDragEntered)="entered($event)"
+          (cdkDragEnded)="ended($event)"
+          [cdkDragData]="i"
+          class="dashboard-card"
+          [ngStyle]="styleObject()"
+        >
+          <div class="red-backgroud" [ngStyle]="{'background': backgroundColor}">
+            <mat-icon *ngIf="!isMobile" cdkDragHandle class="more-button move-btn"
+              >open_with</mat-icon
+            >
+            <mat-icon cdkDragHandle class="more-button click-btn" (click)="saveFilters(i)"
+              >save</mat-icon
+            >
+            <mat-icon cdkDragHandle class="more-button click-btn" (click)="reload(i)"
+              >repeat</mat-icon
+            >
+            <mat-icon cdkDragHandle class="more-button click-btn" (click)="openInfo(kpi.data, i)"
+              >info</mat-icon
+            >
+            <h3>&nbsp;{{kpi.data.title}}</h3>
+          </div>
+
+          <mat-card-content class="dashboard-card-content">
+            <ng-template widget="i"></ng-template>
+          </mat-card-content>
+        </mat-card>
+      </cdk-drop-list>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

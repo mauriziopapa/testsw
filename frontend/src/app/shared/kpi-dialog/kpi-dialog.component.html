@@ -1,0 +1,61 @@
+<mat-dialog-content>
+  <h1><b>{{title}}</b></h1>
+</mat-dialog-content>
+
+<mat-dialog-content>
+  <h2>Info KPI</h2>
+  <span class="info" [innerHTML]="info"></span>
+</mat-dialog-content>
+
+<mat-dialog-content>
+  <h2>Fonti Dati</h2>
+  <div class="fonti" [innerHTML]="fonti"></div>
+</mat-dialog-content>
+
+<mat-dialog-content>
+  <h2>Gestione target KPI</h2>
+
+  <select
+    class="margin"
+    title="year"
+    name="year"
+    id="year"
+    [(ngModel)]="year"
+    (change)="selectionChange($event)"
+  >
+    <option *ngFor="let y of yearOptions" [value]="y">{{y}}</option>
+  </select>
+  <input
+    class="margin"
+    title="target"
+    type="number"
+    step="0.01"
+    name="target"
+    id="target"
+    [(ngModel)]="target"
+  />
+  <!--(keypress)="($event.charCode >= 48 && $event.charCode < 58)"-->
+  <button class="margin" type="button" (click)="updateTarget()">Aggiorna Target</button>
+</mat-dialog-content>
+
+<mat-dialog-content>
+  <button
+    *ngIf="['199', '125', '157', '214', '191', '189', '188', '165'].includes(kpi.toString())"
+    class="margin"
+    type="button"
+    (click)="debugDatasource()"
+  >
+    Mostra dati sottostanti
+  </button>
+</mat-dialog-content>
+
+<mat-dialog-content *ngIf="debug" class="debug-box">
+  <button [cdkCopyToClipboard]="debug | json">Copy to clipboard</button>
+  <pre contenteditable="false">{{debug | json}}</pre>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button id="closeButton" color="warn" (click)="dialogRef.close(false)">
+    Chiudi
+  </button>
+</mat-dialog-actions>

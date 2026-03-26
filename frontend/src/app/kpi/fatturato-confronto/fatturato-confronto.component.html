@@ -1,0 +1,13 @@
+<kpi-filters
+  [widgetInstance]="widget_instance"
+  [globalFilters]="global_filters"
+  [url]="url"
+  (filtersChange)="updateFiltersSelection($event)"
+  (search)="searchByFilters($event)"
+></kpi-filters>
+<bar-chart [data]="currentData" [name]="name" [options]="currentOptions"></bar-chart>
+<div *ngIf="!isMobile">
+  <span class="margins"> Fatturato: {{fatturato | currency: 'EUR'}} </span>
+  <span class="margins"> Fatt prec: {{fatturato_prec | currency: 'EUR'}} </span>
+  <span class="margins"> Budget: {{budget | currency: 'EUR'}} </span>
+</div>

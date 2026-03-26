@@ -1,0 +1,108 @@
+<!--<h1 class="red-text">Tabella Dati Materie Prime</h1>-->
+<form [formGroup]="form" autocomplete="off">
+  <mat-table [dataSource]="dataSource" formArrayName="materie_prime">
+    <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+    <ng-container matColumnDef="materia_prima">
+      <mat-header-cell *matHeaderCellDef> Famiglia Materia Prima </mat-header-cell>
+      <mat-cell *matCellDef="let element; let index = index" [formGroup]="element">
+        <mat-form-field class="column-width" floatLabel="never">
+          <input
+            matInput
+            placeholder="Famiglia Materia Prima"
+            formControlName="materia_prima"
+            [matAutocomplete]="auto"
+          />
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option
+              *ngFor="let option of filteredOptions[index] | async"
+              [value]="option.nome"
+              (click)="mpChange(option, element)"
+            >
+              {{option.nome}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="materia_prima_ts">
+      <mat-header-cell *matHeaderCellDef> Materia Prima TS </mat-header-cell>
+      <mat-cell *matCellDef="let element; let index = index" [formGroup]="element">
+        <mat-form-field class="column-width" floatLabel="never">
+          <input
+            matInput
+            placeholder="Materia Prima TS"
+            formControlName="materia_prima_ts"
+            [matAutocomplete]="autoInq"
+          />
+          <mat-autocomplete autoActiveFirstOption #autoInq="matAutocomplete">
+            <mat-option
+              *ngFor="let option of filteredInquinanti[index] | async"
+              [value]="option.DesArticolo"
+              (click)="mptsChange(option, element)"
+            >
+              {{option.CodArticolo}} - {{option.DesArticolo}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="materia_prima_ts_cod">
+      <mat-header-cell *matHeaderCellDef> Codice Materia Prima TS </mat-header-cell>
+      <mat-cell *matCellDef="let element; let index = index" [formGroup]="element">
+        <mat-form-field class="column-width" floatLabel="never">
+          <input
+            matInput
+            placeholder="Codice Materia Prima TS"
+            formControlName="materia_prima_ts_cod"
+            readonly
+          />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="fornitore_materia_prima_ts_cod">
+      <mat-header-cell *matHeaderCellDef> Codice Fornitore Materia Prima TS </mat-header-cell>
+      <mat-cell *matCellDef="let element; let index = index" [formGroup]="element">
+        <mat-form-field class="column-width" floatLabel="never">
+          <input
+            matInput
+            placeholder="Codice Fornitore Materia Prima TS"
+            formControlName="fornitore_materia_prima_ts_cod"
+            readonly
+          />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="azioni">
+      <th mat-header-cell *matHeaderCellDef>Azioni</th>
+      <td mat-cell *matCellDef="let row; let index = index">
+        <mat-icon class="delete" title="Elimina" (click)="deleteRow($event, index)"
+          >delete</mat-icon
+        >
+      </td>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <br />
+  <button type="button" mat-raised-button (click)="addRow()">Aggiungi riga</button>
+  &nbsp;
+  <button type="button" mat-raised-button color="primary" (click)="save()">Salva</button>
+</form>
+
+<!-- utile per debug 
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title> Form value </mat-panel-title>
+    </mat-expansion-panel-header>
+    <code> {{form.value | json}} </code>
+  </mat-expansion-panel>
+</mat-accordion>
+-->

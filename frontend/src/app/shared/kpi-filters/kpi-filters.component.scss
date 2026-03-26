@@ -1,0 +1,47 @@
+.row {
+  color: black;
+  margin-top: 15px;
+}
+
+.month-picker .mat-calendar-period-button {
+  pointer-events: none;
+}
+
+.month-picker .mat-calendar-arrow {
+  display: none;
+}
+
+.container {
+  //background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.inner {
+  //background-color: yellow;
+  flex-flow: row wrap;
+  display: inline-flex;
+  min-width: 500px;
+}
+
+.item {
+  //background-color: green;
+  width: 23%;
+}
+
+.item-btn {
+  //background-color: green;
+  width: 5%;
+  height: max-content;
+}
+
+.mat-stroked-button {
+  min-width: 35px !important;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.field-width {
+  width: 75%;
+}

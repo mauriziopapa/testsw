@@ -1,0 +1,54 @@
+.red-text {
+  color: red;
+  font-size: 1em;
+}
+
+.right {
+  float: right;
+  margin-right: 5em;
+}
+
+section.legenda {
+  display: flow-root;
+  color: black;
+  font: 400 14px / 20px Roboto, 'Helvetica Neue', sans-serif;
+  letter-spacing: normal;
+}
+
+// per personalizzare e sovrascrivere le classi css del componente figlio
+// questa tabella ha esigenze grafiche leggermente diverse
+::ng-deep .row {
+  line-height: 1em !important;
+}
+
+::ng-deep .impianto {
+  min-width: 125px;
+}
+
+::ng-deep .kpi-val {
+  min-width: 125px;
+}
+
+::ng-deep .input {
+  max-width: 65px !important;
+}
+
+::ng-deep .nome-kpi {
+  min-width: 400px !important;
+  max-width: 450px !important;
+}
+
+::ng-deep .kpi-name {
+  background-color: #009688;
+  color: white;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 1px;
+  padding-left: 3px;
+  margin-bottom: 2px;
+  font-weight: normal !important;
+}
+
+::ng-deep .azienda {
+  font-weight: normal;
+}

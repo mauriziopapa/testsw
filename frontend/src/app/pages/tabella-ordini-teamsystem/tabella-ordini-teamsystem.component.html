@@ -1,0 +1,18 @@
+<h2>
+  Questa tabella mostra dei dati di riepilogo sugli ordini fatti da Team System.
+</h2>
+
+
+<div class="select-div">
+
+  <label class="year-select-label" for="years">Anno Ordine:</label>
+  <select class="year-select" id="years" [(ngModel)]="selectedValue" (ngModelChange)="onSelect($event)">
+    <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+  </select>
+</div>
+
+<generic-table
+  [dataSource]="dataSource"
+  [displayedColumns]="displayedColumns"
+  [columns]="columns"
+></generic-table>

@@ -1,0 +1,9 @@
+<kpi-filters
+  [widgetInstance]="widget_instance"
+  [globalFilters]="global_filters"
+  [url]="url"
+  (filtersChange)="updateFiltersSelection($event)"
+  (search)="searchByFilters($event)"
+></kpi-filters>
+<bar-chart [data]="currentData" [name]="name" [options]="currentOptions"></bar-chart>
+<p>La somma per il periodo selezionato è: {{formattedValue}}</p>

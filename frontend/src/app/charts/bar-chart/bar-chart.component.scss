@@ -1,0 +1,17 @@
+.bar-chart-container {
+  position: relative;
+  margin: auto;
+  // border: 2px dotted green;
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+  .bar-chart-container {
+    position: relative;
+    margin: auto;
+    height: 22em;
+    width: 80vw;
+    max-width: 80vw;
+    // border: 2px dotted black;
+  }
+}

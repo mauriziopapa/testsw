@@ -1,0 +1,264 @@
+<mat-nav-list class="list-horizontal">
+  <!--DA SCOMMENTARE <button class="menu-white-text" mat-list-item href="#">Personalizza</button>-->
+  <button class="menu-white-text" mat-list-item [matMenuTriggerFor]="belowMenu">Strumenti</button>
+  <mat-menu class="menu-white-text" #belowMenu="matMenu" yPosition="below">
+    <a
+      mat-menu-item
+      routerLink="tabella-dati-impianti"
+      (click)="setTitoloTabelle('Tabella Dati Impianti')"
+      >Tabella Dati Impianti</a
+    >
+    <a
+      mat-menu-item
+      routerLink="tabella-dati-impianti-ind"
+      (click)="setTitoloTabelle('Tabella Dati Induzione')"
+      >Tabella Dati Impianti IND</a
+    >
+    <a
+      mat-menu-item
+      routerLink="tabella-dati-impianti-fvf"
+      (click)="setTitoloTabelle('Tabella Dati Impianti FVF')"
+      >Tabella Dati Impianti FVF</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel', 'luca', 'benito'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-dati-manutenzione"
+      (click)="setTitoloTabelle('Tabella Dati Manutenzione')"
+      >Tabella Dati Manutenzione</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel', 'luca', 'benito'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-dati-ritardo-manutenzione"
+      (click)="setTitoloTabelle('Tabella Dati Ritardo Manutenzione')"
+      >Tabella Dati Ritardo Manutenzione</a
+    >
+    <a
+      mat-menu-item
+      routerLink="tabella-dati-personale"
+      (click)="setTitoloTabelle('Tabella Dati Personale')"
+      >Tabella Dati Personale</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-dati-direzione"
+      (click)="setTitoloTabelle('Tabella Dati Direzione')"
+      >Tabella Dati Direzione</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-dati-concorrenti"
+      (click)="setTitoloTabelle('Tabella Dati Concorrenti')"
+      >Tabella Dati Concorrenti</a
+    >
+    <a
+      mat-menu-item
+      routerLink="tabella-dati-cartellino"
+      (click)="setTitoloTabelle('Tabella Dati Ore Cartellino')"
+      >Tabella Dati Ore Cartellino</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-dati-emissioni"
+      (click)="setTitoloTabelle('Tabella Dati Emissioni')"
+      >Tabella Dati Emissioni</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-dati-rifiuti"
+      (click)="setTitoloTabelle('Tabella Dati Rifiuti')"
+      >Tabella Dati Rifiuti</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-dati-contatori-misurazioni"
+      (click)="setTitoloTabelle('Tabella Dati Misurazioni Contatori')"
+    >
+      Tabella Dati Misurazioni Contatori
+    </a>
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-dati-misurazione-metano"
+      (click)="setTitoloTabelle('Tabella Dati Misurazione - Metano')"
+    >
+      Tabella Dati Misurazione - Metano
+    </a>
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-dati-map-mp-ts"
+      (click)="setTitoloTabelle('Tabella di mapping famiglie materie prime con Materie Prime da Team System')"
+    >
+      Tabella Mapping Famiglie Materie Prime
+    </a>
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-dati-costo-materieprime"
+      (click)="setTitoloTabelle('Tabella Dati Costo Materie Prime')"
+    >
+      Tabella Dati Costo Materie Prime
+    </a>
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel', 'gilda'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-dati-budget"
+      (click)="setTitoloTabelle('Tabella Dati Budget')"
+    >
+      Tabella Dati Budget
+    </a>
+    <a
+      *ngIf="!['gilda', 'angelina', 'liliana'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-dati-laboratorio"
+      (click)="setTitoloTabelle('Tabella Dati Laboratorio')"
+    >
+      Tabella Dati Laboratorio
+    </a>
+  </mat-menu>
+  <button class="menu-white-text" mat-list-item [matMenuTriggerFor]="tablesMenu">
+    Consultazione Tabelle Dati
+  </button>
+  <mat-menu class="menu-white-text" #tablesMenu="matMenu" yPosition="below">
+    <a mat-menu-item routerLink="tabella-materieprime-lavorazioni">Materie Prime-Lavorazioni</a>
+    <a mat-menu-item routerLink="tabella-contatori-lavorazioni">Contatori-Lavorazioni</a>
+    <a mat-menu-item routerLink="tabella-rifiuti-lavorazioni">Rifiuti-Lavorazioni</a>
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel', 'gilda'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-fatturato-clienti"
+      (click)="setTitoloTabelle('Tabella Fatturato Clienti')"
+      >Fatturato Clienti</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel', 'gilda'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-costo-fornitori"
+      (click)="setTitoloTabelle('Tabella Costo Fornitori')"
+      >Costo Fornitori</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel', 'gilda'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-riepilogo-clienti"
+      (click)="setTitoloTabelle('Riepilogo Dati Clienti')"
+      >Riepilogo Dati Clienti</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-aumento-mp-fornitori"
+      (click)="setTitoloTabelle('Riepilogo Dati Aumento Mp Fornitori')"
+      >Riepilogo Dati Aumento Mp Fornitori</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-ordini-teamsystem"
+      (click)="setTitoloTabelle('Tabella Ordini Teamsystem')"
+      >Ordini Teamsystem
+    </a>
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-ordini-materie-prime-teamsystem"
+      (click)="setTitoloTabelle('Tabella Ordini Materie Prime Teamsystem')"
+      >Ordini Materie Prime Teamsystem</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel','angelina','alessio'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-hr-dipendenti-teamsystem"
+      (click)="setTitoloTabelle('Tabella HR Dipendenti Teamsystem')"
+      >HR Dipendenti
+    </a>
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'Daniel', 'gilda','angelina'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-ore-formazione"
+      (click)="setTitoloTabelle('Ore Formazione')"
+      >Ore Formazione</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-zoho-tasks"
+      (click)="setTitoloTabelle('Zoho Tasks')"
+      >Zoho Tasks</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'simone', 'francesco', 'luca', 'benito'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-timbrate-nc"
+      (click)="setTitoloTabelle('Timbrate Commesse NC')"
+      >Timbrate Commesse NC</a
+    >
+    <a
+      *ngIf="['alessandro', 'michelangelo', 'giuseppe', 'simone', 'francesco', 'luca', 'benito'].includes(username)"
+      mat-menu-item
+      routerLink="tabella-commesse-nc"
+      (click)="setTitoloTabelle('Commesse NC')"
+      >Commesse NC</a
+    >
+  </mat-menu>
+  <button class="menu-white-text" mat-list-item routerLink="assessment/{{dash}}">Assessment</button>
+</mat-nav-list>
+
+<mat-toolbar [ngStyle]="{'background': backgroundColor}" *ngIf="isTablet" class="mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  <p class="center-text">{{titoloTablet}}</p>
+  <!--<img alt="Logo" class="avatar2" src="./assets/logo.png" /> &nbsp; &nbsp; {{titoloTablet}}-->
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav [ngStyle]="{'background': backgroundColor}" #sidenav="matSidenav">
+    <!--<img alt="Logo" class="avatar" src="./assets/logo.png" />-->
+    <h1 style="color: red; background-color: yellow" *ngIf="test">VERSIONE DI TEST</h1>
+    <h1 style="color: red; background-color: yellow" *ngIf="localhost">
+      SEI IN AMBIENTE DI SVILUPPO LOCALE
+    </h1>
+    <a
+      *ngFor="let voice of menuVoices"
+      mat-button
+      class="menu-button"
+      (click)="setTitoloTablet(voice)"
+      routerLinkActive="active-list-item"
+      routerLink="{{voice.url}}"
+      title="{{voice.name}}"
+    >
+      <span>{{voice.name}}</span>
+    </a>
+
+    <mat-divider></mat-divider>
+
+    <div style="position: relative; margin: 20px !important">
+      <p class="name">{{user}}</p>
+      <!--<p class="designation">Ruolo utente: {{userRole}}</p>-->
+    </div>
+
+    <button mat-button class="menu-button">
+      <mat-icon>logout</mat-icon>
+      <span (click)="logout()">Logout</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <!--  mat-elevation-z8 -->
+      <router-outlet></router-outlet>
+    </div>
+    <ng-container *ngIf="loading$ | async">
+      <div class="overlay"></div>
+      <mat-progress-spinner [mode]="'indeterminate'"></mat-progress-spinner>
+    </ng-container>
+  </mat-sidenav-content>
+</mat-sidenav-container>

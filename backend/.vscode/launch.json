@@ -1,0 +1,218 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug backend",
+      "program": "${workspaceFolder}/server/www.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "[PROD] Debug backend",
+      "program": "${workspaceFolder}/server/www.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "[PROD] Debug job Commesse",
+      "program": "${workspaceFolder}/server/cron/jobCommesse.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "[PROD] Debug job Commesse Lavorazioni",
+      "program": "${workspaceFolder}/server/cron/jobCommesseLavorazioni.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Contratti Testate",
+      "program": "${workspaceFolder}/server/cron/jobContrattiTestate.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Contratti Righe",
+      "program": "${workspaceFolder}/server/cron/jobContrattiRighe.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Fatture Testate",
+      "program": "${workspaceFolder}/server/cron/jobFattureTestate.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Fatture Righe",
+      "program": "${workspaceFolder}/server/cron/jobFattureRighe.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Bolle Scarico Testate",
+      "program": "${workspaceFolder}/server/cron/jobBolleScaricoTestate.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Bolle Scarico Righe",
+      "program": "${workspaceFolder}/server/cron/jobBolleScaricoRighe.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Movimenti Commessa",
+      "program": "${workspaceFolder}/server/cron/jobMovimentiCommessa.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Registro Induzione",
+      "program": "${workspaceFolder}/server/cron/jobRegistroInduzione.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Commesse",
+      "program": "${workspaceFolder}/server/cron/jobCommesse.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Commesse Lavorazioni",
+      "program": "${workspaceFolder}/server/cron/jobCommesseLavorazioni.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Ore",
+      "program": "${workspaceFolder}/server/cron/jobOre.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Dipendenti",
+      "program": "${workspaceFolder}/server/cron/jobDipendenti.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Performance Clienti",
+      "program": "${workspaceFolder}/server/cron/jobPerformanceClienti.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Impianti",
+      "program": "${workspaceFolder}/server/cron/jobImpianti.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Prosys",
+      "program": "${workspaceFolder}/server/cron/jobSyncProsys.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Impianti INDUZIONE",
+      "program": "${workspaceFolder}/server/cron/jobImpiantiIND.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug job Zoho",
+      "program": "${workspaceFolder}/server/cron/jobZohoProjects.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "local"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+.stacked-chart-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+  .stacked-chart-container {
+    position: relative;
+    margin: auto;
+    height: 21em;
+    width: 80vw;
+    max-width: 80vw;
+  }
+}

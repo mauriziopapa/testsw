@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-content class="mat-elevation-z0">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <img alt="Logo" class="login-logo" src="../../../assets/logo-def.png" />
+      <mat-error *ngIf="loginInvalid">Username o password errati</mat-error>
+      <mat-form-field class="full-width-input">
+        <input matInput placeholder="Username" formControlName="username" required />
+        <mat-error>Inserire username e password validi</mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input
+          matInput
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+          required
+        />
+        <mat-error>Inserire username e password validi</mat-error>
+      </mat-form-field>
+      <button mat-raised-button class="login-btn">Login</button>
+    </form>
+    <br />
+    <br />
+    <!--
+      <button class="pwd-forgotten" (click)="resetPassword()">Hai dimenticato la password?</button>
+     -->
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,46 @@
+.card-background {
+  background-color: #eeeeee;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.row {
+  color: black;
+  width: 100%;
+}
+
+.container {
+  //background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.inner {
+  //background-color: yellow;
+  flex-flow: row wrap;
+  display: inline-flex;
+}
+
+.item {
+  //background-color: green;
+}
+
+.item-btn {
+  //background-color: green;
+  height: max-content;
+  margin-top: 1em;
+}
+
+.field-width {
+  //width: 75%;
+  padding-right: 2em;
+}
+
+.margin {
+  margin-bottom: 4px;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding-bottom: 0 !important;
+}

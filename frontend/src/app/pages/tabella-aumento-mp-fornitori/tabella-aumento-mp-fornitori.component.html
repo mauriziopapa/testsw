@@ -1,0 +1,17 @@
+<h2>
+  In questa tabella viene mostrata la spesa corrente per materia prima e fornitore con relativa
+  percentuale di incremento rispetto all'anno precedente. Per prezzo corrente viene preso l'ultimo
+  prezzo di acquisto. La percentuale di incremento è calcolata come ((costoMedioCurr -
+  costoMedioPrec) / costoMedioPrec) * 100 per le MP e come ((spesaCurr - spesaPrec) / spesaPrec) *
+  100 per gli altri elementi.
+</h2>
+<h2>
+  I dati di riferimento sono quelli fino al mese in corso, rapportati allo stesso periodo dell'anno
+  precedente.
+</h2>
+
+<generic-table
+  [dataSource]="dataSource"
+  [displayedColumns]="displayedColumns"
+  [columns]="columns"
+></generic-table>

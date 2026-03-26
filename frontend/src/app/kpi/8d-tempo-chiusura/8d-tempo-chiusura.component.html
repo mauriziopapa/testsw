@@ -1,0 +1,8 @@
+<kpi-filters
+  [widgetInstance]="widget_instance"
+  [globalFilters]="global_filters"
+  (filtersChange)="updateFiltersSelection($event)"
+  (search)="searchByFilters($event)"
+></kpi-filters>
+<bar-chart [data]="currentData" [name]="name"></bar-chart>
+<p class="left">8D chiusi nel periodo selezionato: {{nc_tot}}</p>

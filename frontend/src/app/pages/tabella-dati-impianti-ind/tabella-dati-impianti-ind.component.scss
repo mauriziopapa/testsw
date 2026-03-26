@@ -1,0 +1,254 @@
+.red-text {
+  color: red;
+}
+
+.right {
+  float: right;
+  margin-right: 5em;
+}
+
+.table {
+  font-size: 13px;
+}
+
+.fixed-month {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.fixed {
+  background: white;
+  position: sticky;
+  top: 3.5em;
+  z-index: 999;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.row-head-month {
+  color: black;
+  display: flex;
+  height: 3.5em;
+  line-height: 3.5em;
+}
+
+.row-head {
+  color: black;
+  display: flex;
+  height: 4em;
+  line-height: 4em;
+
+  .kpi-row {
+    display: flex;
+  }
+}
+
+.row {
+  color: black;
+  display: flex;
+  height: 4em;
+  line-height: 4em;
+
+  .kpi-row {
+    display: flex;
+  }
+}
+
+.even {
+  background-color: #f2f2f2;
+}
+
+.odd {
+  background-color: transparent;
+}
+
+.nome-kpi {
+  min-width: 455px;
+  max-width: 455px;
+  padding-left: 0.5em;
+  padding-right: 1em;
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px; /* <-- adjust this */
+  }
+}
+
+.month {
+  text-align: center;
+  min-width: 422px;
+}
+
+.impianto {
+  min-width: 65px;
+  border-top: 1px solid #f2f2f2;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  padding: 15px 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.small {
+  font-size: 9px;
+}
+
+.somma {
+  min-width: 150px !important;
+}
+
+.kpi-val {
+  min-width: 65px;
+  border-top: 1px solid #f2f2f2;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  padding: 15px 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi-dipendenti {
+  max-width: 45px;
+  border-top: 1px solid #f2f2f2;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  padding: 15px 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.kpi-val:hover {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+.input {
+  border: none;
+  max-width: 40px;
+  background-color: transparent;
+  text-align: right;
+}
+
+.input:focus {
+  border-bottom: 1px solid #26a69a;
+  outline: none;
+}
+
+.input-perc {
+  border: none;
+  max-width: 55px;
+  background-color: transparent;
+}
+
+.input-perc:focus {
+  border-bottom: 1px solid #26a69a;
+  outline: none;
+}
+
+::ng-deep .tooltip {
+  background-color: darkblue;
+  font-size: 18px;
+}
+
+section.legenda {
+  display: flow-root;
+  color: black;
+  font: 400 14px / 20px Roboto, 'Helvetica Neue', sans-serif;
+  letter-spacing: normal;
+}
+
+section.legenda span {
+  padding: 4px 6px;
+  margin-right: 5px;
+}
+.produzione {
+  background: hsla(207, 90%, 54%, 0.5);
+}
+.manutenzione {
+  background: hsla(174, 100%, 29%, 0.5);
+}
+.perdite {
+  background: hsla(0, 100%, 29%, 0.5);
+}
+.qualita {
+  background: hsla(54, 100%, 62%, 0.5);
+}
+
+table {
+  //white-space: nowrap;
+  margin: 0;
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  color: black;
+}
+table td,
+table th {
+  border-top: 1px solid #f2f2f2;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  padding: 0.5rem 1rem;
+}
+table thead th {
+  padding: 3px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 25vw;
+}
+table td {
+  padding: 4px 5px;
+  text-align: center;
+}
+
+table tbody th {
+  font-weight: 100;
+  font-style: italic;
+  text-align: left;
+  position: relative;
+}
+table thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+table tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+.tabella-induzione {
+  float: right;
+  position: absolute;
+  right: 2em;
+  top: 17em;
+}
+
+caption {
+  text-align: left;
+  padding: 0.25rem;
+  position: sticky;
+  left: 0;
+}
+
+[role='region'][aria-labelledby][tabindex] {
+  width: 100%;
+  max-height: 98vh;
+  overflow: auto;
+}
+[role='region'][aria-labelledby][tabindex]:focus {
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  outline: 0;
+}

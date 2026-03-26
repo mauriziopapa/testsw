@@ -1,0 +1,67 @@
+<!--<h1 class="red-text">Tabella Dati Misurazioni Contatori</h1>-->
+<table-filters [tableName]="tableName" (tableSearch)="searchByTableFilters($event)"></table-filters>
+<br />
+<form [formGroup]="form">
+  <mat-table [dataSource]="dataSource" formArrayName="budget">
+    <!-- Row definitions -->
+    <mat-header-row mat-header-row *matHeaderRowDef="displayColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; let i = index; columns: displayColumns;"></mat-row>
+
+    <!-- Column definitions -->
+    <ng-container matColumnDef="anno">
+      <mat-header-cell *matHeaderCellDef>Anno</mat-header-cell>
+      <mat-cell *matCellDef="let row; let index = index" [formGroupName]="index">
+        <mat-form-field>
+          <input
+            class="center-text not-allowed"
+            matInput
+            type="number"
+            value=""
+            formControlName="anno"
+            readonly
+          />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="trimestre">
+      <mat-header-cell *matHeaderCellDef>Trimestre</mat-header-cell>
+      <mat-cell *matCellDef="let row; let index = index" [formGroupName]="index">
+        <mat-form-field>
+          <input
+            class="center-text not-allowed"
+            matInput
+            type="text"
+            value=""
+            formControlName="trimestre"
+            readonly
+          />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="costi">
+      <mat-header-cell *matHeaderCellDef>Costi</mat-header-cell>
+      <mat-cell *matCellDef="let row; let index = index" [formGroupName]="index">
+        <mat-form-field>
+          <mat-label></mat-label>
+          <div>
+            <span class="absolute">€</span>
+            <input matInput class="right-text" type="number" value="0" formControlName="costi" />
+          </div>
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="provini">
+      <mat-header-cell *matHeaderCellDef>Provini</mat-header-cell>
+      <mat-cell *matCellDef="let row; let index = index" [formGroupName]="index">
+        <mat-form-field>
+          <input class="center-text" matInput type="text" value="" formControlName="provini" />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+  </mat-table>
+  <br />
+  <button type="button" mat-raised-button color="primary" (click)="save()">Salva</button>
+</form>

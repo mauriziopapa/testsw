@@ -1,0 +1,37 @@
+.red-text {
+  color: red;
+  font-size: 1em;
+}
+
+.right {
+  float: right;
+  margin-right: 5em;
+}
+
+::ng-deep .month {
+  text-align: center;
+  min-width: 225px !important;
+}
+
+::ng-deep .impianto {
+  min-width: 100px !important;
+}
+
+::ng-deep .kpi-val {
+  min-width: 100px !important;
+}
+
+::ng-deep .somma {
+  min-width: 100px !important;
+}
+
+::ng-deep .input {
+  max-width: 70px !important;
+}
+
+section.legenda {
+  display: flow-root;
+  color: black;
+  font: 400 14px / 20px Roboto, 'Helvetica Neue', sans-serif;
+  letter-spacing: normal;
+}

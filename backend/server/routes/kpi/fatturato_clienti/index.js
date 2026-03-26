@@ -1,0 +1,36 @@
+/* eslint-disable camelcase */
+const express = require('express');
+const FatturatoClientiService = require('../../../services/kpi/FatturatoClientiService');
+const ClientiService = require('../../../services/ClientiService');
+const { isAuthenticated } = require('../../../middlewares/authentication');
+
+const config = require('../../../config')[process.env.NODE_ENV || 'local'];
+
+const log = config.log();
+
+const router = express.Router();
+
+module.exports = () => {
+  router.get('/', [isAuthenticated], async (req, res) => {
+    try {
+      const { yearFrom, yearTo, cliente, tipologia, kpi_id } = req.query;
+      const result = await FatturatoClientiService.getKpiValues({ yearFrom, yearTo, cliente, tipologia, kpi_id });
+      return res.json(result);
+    } catch (error) {
+      log.error(`Error getting kpi Fatturato clienti: ${error.message}`, error);
+      return res.sendStatus(500);
+    }
+  });
+
+  router.get('/clienti_ts_un', [isAuthenticated], async (req, res) => {
+    try {
+      const result = await ClientiService.getClienti();
+      return res.json(result);
+    } catch (error) {
+      log.error(`Error getting clienti for Fatturato clienti: ${error.message}`, error);
+      return res.sendStatus(500);
+    }
+  });
+
+  return router;
+};

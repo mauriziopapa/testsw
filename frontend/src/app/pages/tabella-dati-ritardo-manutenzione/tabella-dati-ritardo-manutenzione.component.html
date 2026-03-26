@@ -1,0 +1,24 @@
+<!--<h1 class="red-text">Tabella Dati Ore Cartellino</h1>-->
+
+<table-filters [tableName]="tableName" (tableSearch)="searchByTableFilters($event)"></table-filters>
+<br />
+<section class="padding-container legenda">
+  <button mat-raised-button color="primary" class="right" (click)="onSubmit()">
+    SALVA <mat-icon>save</mat-icon>
+  </button>
+</section>
+
+<table-data-with-months
+  [anni]="anni"
+  [mesi]="mesi"
+  [kpi_rows]="kpi_rows"
+  (calcKpi)="calcKpi($event)"
+></table-data-with-months>
+
+<br />
+
+<button mat-raised-button color="primary" class="right" (click)="onSubmit()">
+  SALVA <mat-icon>save</mat-icon>
+</button>
+<br />
+<br />

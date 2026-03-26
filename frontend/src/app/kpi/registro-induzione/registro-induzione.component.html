@@ -1,0 +1,9 @@
+<kpi-filters
+  [widgetInstance]="widget_instance"
+  [globalFilters]="global_filters"
+  [url]="url"
+  (filtersChange)="updateFiltersSelection($event)"
+  (search)="searchByFilters($event)"
+></kpi-filters>
+<line-chart [data]="currentData" [name]="name"></line-chart>
+<p class="left">Valore Medio: {{pz_ora_ponderato}} pz/h</p>

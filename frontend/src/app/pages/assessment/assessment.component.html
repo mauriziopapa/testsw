@@ -1,0 +1,130 @@
+<mat-card class="card-background mat-elevation-z0">
+  <mat-card-content>
+    <div class="row">
+      <label>Trimestre &nbsp;</label>
+      <select title="trimestre" name="trimestre" id="trimestre" [(ngModel)]="selectedTrimestre">
+        <option [value]="null" disabled selected>Seleziona un trimestre</option>
+        <option *ngFor="let option of options" [ngValue]="option">{{option.ass}}</option>
+      </select>
+      <button
+        mat-stroked-button
+        class="btn-trimestre"
+        *ngIf="selectedTrimestre && !opened"
+        (click)="openAssessment()"
+      >
+        Apri
+      </button>
+      <button mat-stroked-button class="btn-trimestre" *ngIf="opened" (click)="closeAssessment()">
+        Chiudi
+      </button>
+      <button mat-stroked-button class="btn-trimestre" *ngIf="opened" (click)="saveAssessment()">
+        Salva
+      </button>
+      <button mat-stroked-button class="btn-trimestre" *ngIf="opened" (click)="exportAssessment()">
+        Esporta
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-grid-list cols="{{cols}}" rowHeight="18em" gutterSize="5px">
+  <mat-grid-tile
+    *ngFor="let kpi of kpis; let i = index;"
+    [colspan]="kpi.data.cols"
+    [rowspan]="kpi.data.rows"
+  >
+    <div>
+      <p class="export">
+        Esportare?
+        <mat-checkbox [(ngModel)]="kpi.data.checked" (click)="checked(kpi)"></mat-checkbox>
+      </p>
+
+      <div id="kpi-{{i}}">
+        <mat-card
+          class="dashboard-card image"
+          [ngStyle]="{'border': '4px solid ' + backgroundColor}"
+        >
+          <div class="red-backgroud" [ngStyle]="{'background': backgroundColor}">
+            <mat-icon id="kpi-save-{{i}}" class="more-button click-btn" (click)="saveFilters(i)"
+              >save</mat-icon
+            >
+            <mat-icon id="kpi-repeat-{{i}}" class="more-button click-btn" (click)="reload(kpi.data)"
+              >repeat</mat-icon
+            >
+            <mat-icon id="kpi-info-{{i}}" class="more-button click-btn" (click)="openInfo(kpi.data)"
+              >info</mat-icon
+            >
+            <h3>&nbsp;{{kpi.data.title}}</h3>
+          </div>
+
+          <mat-card-content class="dashboard-card-content">
+            <ng-template widget="i"></ng-template>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+
+    <mat-card class="screenshot-card mat-elevation-z0">
+      <mat-card-content class="dashboard-card-content">
+        <p class="bold">Screenshot:</p>
+        <img
+          class="image"
+          id="snap-{{i}}"
+          *ngIf="!opened || assessment[i].img == '/assets/dummy-snap.jpg'"
+          alt="Immagine dummy-screen"
+          src="./assets/dummy-snap.jpg"
+        />
+        <img
+          class="image"
+          id="snap-{{i}}"
+          *ngIf="assessment[i].img != '/assets/dummy-snap.jpg'"
+          alt="Immagine screen"
+          src="https://sapere-temprasud.studioware.it{{assessment[i].img}}"
+        />
+        <p>
+          <button *ngIf="opened && !screenshotTaken" class="ass-button" (click)="takeScreen(i)">
+            SCREENSHOT
+          </button>
+          <button *ngIf="screenshotTaken" class="ass-button" (click)="cancelScreen(i)">
+            ANNULLA
+          </button>
+          <button *ngIf="screenshotTaken" class="ass-button" (click)="saveScreen(i)">SALVA</button>
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="text-card mat-elevation-z0">
+      <mat-card-content class="dashboard-card-content">
+        <p class="bold">Analisi risultati:</p>
+        <textarea
+          class="textarea"
+          [readonly]="!opened"
+          title="test"
+          name="test"
+          id="test"
+          cols="30"
+          rows="20"
+          [(ngModel)]="assessment[i].nota_risultati"
+        >
+        </textarea>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="text-card mat-elevation-z0">
+      <mat-card-content class="dashboard-card-content">
+        <p class="bold">Strategia futura:</p>
+        <textarea
+          class="textarea"
+          [readonly]="!opened"
+          title="test"
+          name="test1"
+          id="test1"
+          cols="30"
+          rows="20"
+          [(ngModel)]="assessment[i].nota_strategia_futura"
+        >
+        </textarea>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

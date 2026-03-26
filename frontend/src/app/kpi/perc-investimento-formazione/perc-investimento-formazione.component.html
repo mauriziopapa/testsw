@@ -1,0 +1,15 @@
+<kpi-filters
+  [widgetInstance]="widget_instance"
+  [globalFilters]="global_filters"
+  [url]="url"
+  (filtersChange)="updateFiltersSelection($event)"
+  (search)="searchByFilters($event)"
+></kpi-filters>
+<bar-chart [data]="currentData" [name]="name" [options]="currentOptions"></bar-chart>
+<div>
+  <span class="margins" *ngIf="formazione > 0">
+    Inv Formazione: {{formazione | currency: 'EUR'}}
+  </span>
+  <span class="margins" *ngIf="budget > 0"> Budget: {{budget | currency: 'EUR'}} </span>
+  <span class="margins" *ngIf="fatturato > 0"> Fatturato: {{fatturato | currency: 'EUR'}} </span>
+</div>

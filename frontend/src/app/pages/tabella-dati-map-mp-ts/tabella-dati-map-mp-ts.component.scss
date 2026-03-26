@@ -1,0 +1,25 @@
+.red-text {
+  color: red;
+  font-size: 1em;
+}
+
+.mat-header-cell,
+.mat-cell {
+  justify-content: center !important;
+}
+
+.column-width {
+  width: 25em;
+}
+
+.mat-form-field {
+  text-align: center;
+}
+
+th.mat-header-cell {
+  border-bottom-style: none;
+}
+
+td.mat-cell {
+  border-bottom-style: none;
+}

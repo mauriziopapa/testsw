@@ -1,0 +1,51 @@
+.red-text {
+  color: red;
+}
+
+.label {
+  color: black;
+  font-size: 0.6em;
+}
+
+.col-width {
+  width: 80%;
+}
+
+.mat-header-cell,
+.mat-cell {
+  justify-content: center !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.input {
+  :hover {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
+      0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  :focus {
+    outline: none;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type='number'] {
+  -moz-appearance: textfield; /* Firefox */
+}

@@ -1,0 +1,17 @@
+<kpi-filters
+  [widgetInstance]="widget_instance"
+  [globalFilters]="global_filters"
+  [url]="url"
+  (filtersChange)="updateFiltersSelection($event)"
+  (search)="searchByFilters($event)"
+></kpi-filters>
+<stacked-bar-chart
+  [data]="currentData"
+  [name]="name"
+  [options]="currentOptions"
+></stacked-bar-chart>
+<div *ngIf="!isMobile">
+  <span *ngIf="tot > 0"> Ordini Totali Evasi nel periodo: {{tot}} </span>
+  <span class="label green" *ngIf="puntuali > 0"> di cui puntuali: {{puntuali}} </span>
+  <span class="label red" *ngIf="in_ritardo > 0"> in ritardo: {{in_ritardo}} </span>
+</div>

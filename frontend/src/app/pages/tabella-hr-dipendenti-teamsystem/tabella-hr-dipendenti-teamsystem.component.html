@@ -1,0 +1,18 @@
+<h2>
+  Questa tabella mostra i dipendenti di TeamSystem HR che vengono sincronizzati.
+</h2>
+
+
+<div class="select-div">
+
+  <label class="azienda-select-label" for="azienda">Azienda:</label>
+  <select class="azienda-select" id="aziendas" [(ngModel)]="selectedAzienda" (ngModelChange)="onSelect($event)">
+    <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+  </select>
+</div>
+
+<generic-table
+  [dataSource]="dataSource"
+  [displayedColumns]="displayedColumns"
+  [columns]="columns"
+></generic-table>

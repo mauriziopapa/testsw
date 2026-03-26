@@ -1,0 +1,62 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.info {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.fonti {
+  //text-align: justify;
+  //text-justify: inter-word;
+  white-space: pre-line;
+  ::ng-deep p {
+    margin-bottom: 0em;
+  }
+
+  ::ng-deep div {
+    margin: 0%;
+  }
+
+  ::ng-deep ul {
+    margin: 0%;
+  }
+}
+
+h2 {
+  margin: 0em;
+}
+
+.margin {
+  margin-right: 0.5em;
+}
+
+.debug-box {
+  height: 200px;
+  background: lightgray;
+  color: black;
+}
+
+::ng-deep.mat-mdc-dialog-container {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 25px solid #ddd;
+  border-radius: 1em;
+}
+
+::ng-deep.mat-mdc-dialog-container .mdc-dialog__surface {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+::ng-deep .mdc-dialog .mdc-dialog__content {
+  padding: 20px 24px 5px 24px;
+}

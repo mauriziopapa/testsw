@@ -1,0 +1,45 @@
+.grid-container {
+  margin: 10px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 0em;
+  border: 4px solid #c31421;
+  border-radius: 0.37em;
+}
+
+.more-button {
+  float: right;
+}
+
+.red-backgroud {
+  color: white;
+}
+
+.dashboard-card-content {
+  text-align: center;
+  width: 100%;
+}
+
+.cdk-drop-list {
+  height: 100%;
+  width: 100%;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  opacity: 0.5;
+}
+
+.cdk-drag-animating {
+  transition: unset;
+}
+
+.cdk-drag-placeholder {
+  display: none;
+}

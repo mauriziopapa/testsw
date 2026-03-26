@@ -1,0 +1,65 @@
+.red-text {
+  color: red;
+}
+
+.label {
+  color: black;
+  font-size: 0.6em;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  text-align: right;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td,
+#customers th {
+  text-align: right;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: right;
+  background-color: #f3f2ed;
+  color: black;
+}
+
+#customers td {
+  color: black;
+}
+
+.no-borders {
+  border: 0px !important;
+  text-align: center !important;
+}
+
+.row {
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type='number'] {
+  -moz-appearance: textfield; /* Firefox */
+}

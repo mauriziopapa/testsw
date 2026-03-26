@@ -1,0 +1,154 @@
+<table-filters [tableName]="tableName" (tableSearch)="searchByTableFilters($event)"></table-filters>
+<br />
+<h2 class="black-text">
+  Per le caselle evidenziate di <span class="orange-background">arancione</span> il valore inserito
+  è stato forzato manualmente.
+</h2>
+<h2 *ngIf="forced" class="red">
+  Attenzione! Hai modificato i valori della tabella, salvando adesso, le caselle di colore arancione
+  verranno identificate come forzature e non verranno più aggiornate automaticamente. <br />
+  Se non vuoi che questo accada, oppure se hai modificato per errore, ricarica la pagina senza
+  salvare per ripristinare i dati originari. Inserendo il valore 0, invece, verrà ripristinato il
+  valore di default e il dato tornerà ad essere sincronizzato se non è più vecchio di 2 mesi.
+</h2>
+<section class="padding-container legenda">
+  <div>
+    <span>Legenda inserimento: </span>
+    <span class="produzione">Produzione</span>
+    <span class="manutenzione">Manutenzione</span>
+    <span class="qualita">Qualità</span>
+  </div>
+  <button mat-raised-button color="primary" class="right" (click)="onSubmit()">
+    SALVA <mat-icon>save</mat-icon>
+  </button>
+</section>
+
+<div class="table">
+  <div class="row-head-month fixed-month">
+    <div class="nome-kpi fixed-month">&nbsp;</div>
+    <div class="month bold fixed-month" *ngFor="let mese of mesi">{{mese}}</div>
+  </div>
+
+  <div class="row-head fixed">
+    <div class="nome-kpi fixed"></div>
+    <div
+      class="impianto {{impianto.classe}} bold fixed"
+      [ngClass]="impianto.nome_impianto.length > '10' ? 'small' : ''"
+      *ngFor="let impianto of impianti"
+    >
+      {{impianto.nome_impianto}}
+    </div>
+  </div>
+
+  <div class="row" *ngFor="let row of kpi_rows; let odd=odd; let even=even ">
+    <div
+      class="nome-kpi {{row.classe}} bold"
+      [ngClass]="{ odd: odd, even: even }"
+      matTooltip="{{row.tooltip}}"
+      matTooltipClass="tooltip"
+    >
+      <span> {{row.nome_kpi}} </span>
+    </div>
+    <div class="kpi-row" [ngClass]="{ odd: odd, even: even }">
+      <div [ngSwitch]="row.nome_kpi" class="kpi-row">
+        <!--RIGHE CON CAMPI CALCOLATI es. OEE, RGI, Ore produttive-->
+        <div *ngSwitchCase="nomiKpiCalcolati.get(row.nome_kpi)" class="kpi-row">
+          <!--div disabilitati FVF-->
+          <div class="kpi-val" *ngFor="let div of divFVF">
+            <input class="input" type="text" title="{{row.tooltip}}" disabled />
+          </div>
+          <!--somma FVF-->
+          <div class="kpi-val somma not-allowed">
+            <input
+              [ngClass]="row.format === 'perc' ? 'input-perc bold' : 'input bold'"
+              type="text"
+              title="{{row.tooltip}}"
+              id="sommaFVF{{row.id}}"
+              [value]="valoriKpiCalcolati.get('sommaFVF' + row.id)  | percentage:row.format"
+              matTooltip="{{row.tooltip}}"
+              matTooltipClass="tooltip"
+              readonly
+            />
+          </div>
+          <!--div disabilitati FVFSZ-->
+          <div class="kpi-val" *ngFor="let div of divFVFSZ">
+            <input class="input" type="text" title="{{row.tooltip}}" disabled />
+          </div>
+          <!--somma FVFSZ-->
+          <div class="kpi-val somma not-allowed">
+            <input
+              [ngClass]="row.format === 'perc' ? 'input-perc bold' : 'input bold'"
+              type="text"
+              title="{{row.tooltip}}"
+              id="sommaTV{{row.id}}"
+              [value]="valoriKpiCalcolati.get('sommaFVF-SZ' + row.id) | percentage:row.format"
+              matTooltip="{{row.tooltip}}"
+              matTooltipClass="tooltip"
+              readonly
+            />
+          </div>
+        </div>
+
+        <!--RIGHE CHE IDENTIFICANO KPI + SOMME-->
+        <div *ngSwitchDefault class="kpi-row">
+          <!-- FVF -->
+          <div
+            class="kpi-val"
+            [ngClass]="row.valori[div].forzatura_manuale ? 'orange-background' : ''"
+            *ngFor="let div of divFVF"
+          >
+            <input
+              class="input"
+              type="text"
+              title="valore kpi"
+              *ngIf="row.valori[div]"
+              [(ngModel)]="row.valori[div].valore"
+              (ngModelChange)="inputChanged(row, 'FVF', row.valori[div])"
+            />
+          </div>
+          <!-- SOMMA FVF -->
+          <div class="kpi-val somma not-allowed">
+            <input
+              class="input"
+              type="text"
+              title="valore kpi"
+              [value]="valoriKpiSommaReparti.get('FVF' + row.id)"
+              readonly
+            />
+          </div>
+          <!-- FVFSZ -->
+          <div
+            class="kpi-val"
+            [ngClass]="row.valori[div].forzatura_manuale ? 'orange-background' : ''"
+            *ngFor="let div of divFVFSZ"
+          >
+            <input
+              class="input"
+              type="text"
+              title="valore kpi"
+              *ngIf="row.valori[div]"
+              [(ngModel)]="row.valori[div].valore"
+              (ngModelChange)="inputChanged(row, 'FVF-SZ', row.valori[div])"
+            />
+          </div>
+          <!-- SOMMA FVFSZ -->
+          <div class="kpi-val somma not-allowed">
+            <input
+              class="input"
+              type="text"
+              title="valore kpi"
+              [value]="valoriKpiSommaReparti.get('FVF-SZ' + row.id)"
+              readonly
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<button mat-raised-button color="primary" class="right" (click)="onSubmit()">
+  SALVA <mat-icon>save</mat-icon>
+</button>
+<br />
+<br />

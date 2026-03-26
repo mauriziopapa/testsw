@@ -1,0 +1,14 @@
+<kpi-filters
+  [widgetInstance]="widget_instance"
+  [globalFilters]="global_filters"
+  (filtersChange)="updateFiltersSelection($event)"
+  (search)="searchByFilters($event)"
+></kpi-filters>
+<stacked-bar-chart
+  [data]="currentData"
+  [name]="name"
+  [options]="currentOptions"
+></stacked-bar-chart>
+<div>
+  <p class="left">8D aperti nel periodo selezionato: {{nc_tot}}</p>
+</div>

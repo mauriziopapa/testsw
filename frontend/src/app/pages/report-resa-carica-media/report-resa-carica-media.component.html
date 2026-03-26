@@ -1,0 +1,37 @@
+<!--<h1 class="red-text">Tabella Dati Misurazioni Contatori</h1>-->
+<table-filters [tableName]="tableName" (tableSearch)="searchByTableFilters($event)"></table-filters>
+<br />
+<h2 class="label">
+  Per ogni Ciclo sono riportati il numero delle fornate, i rapporti tra il Tot KG rispetto al numero
+  delle fornate e la relativa percentuale di variazione rispetto all'anno precedente nei vari anni.
+  Vengono mostrati solo i CICLI eseguiti nell'anno e per il reparto scelti.
+</h2>
+<!-- qui costruisci la tabella html semplice semplice con la select per il reparto -->
+<table id="customers">
+  <thead>
+    <tr class="row">
+      <th class="no-borders" *ngFor="let item of header | keyvalue:keepOriginalOrder">
+        <span *ngIf="item.key.startsWith('ciclo')"></span>
+        <span *ngIf="item.key.startsWith('a_')"></span>
+        <span *ngIf="item.key.startsWith('n_')">{{item.key.split('_')[1]}}</span>
+        <span *ngIf="item.key.startsWith('p_')"></span>
+      </th>
+    </tr>
+    <tr>
+      <th *ngFor="let item of header | keyvalue:keepOriginalOrder">
+        <span *ngIf="item.key.startsWith('ciclo')">ciclo</span>
+        <span *ngIf="item.key.startsWith('a_')">KG/Forn</span>
+        <span *ngIf="item.key.startsWith('n_')">#Forn</span>
+        <span *ngIf="item.key.startsWith('p_')">%</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let resaCarica of dataSource">
+      <td *ngFor="let item of resaCarica | keyvalue:keepOriginalOrder">
+        <span>{{item.value}}</span>
+        <span *ngIf="item.key.startsWith('p_')"> %</span>
+      </td>
+    </tr>
+  </tbody>
+</table>

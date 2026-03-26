@@ -1,0 +1,220 @@
+<!--<h1 class="red-text">Tabella Dati Emissioni</h1>-->
+<table-filters [tableName]="tableName" (tableSearch)="searchByTableFilters($event)"></table-filters>
+<br />
+<form [formGroup]="form" autocomplete="off">
+  <mat-table [dataSource]="dataSource" formArrayName="emissioni">
+    <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- data Column -->
+    <ng-container matColumnDef="Data">
+      <mat-header-cell *matHeaderCellDef> Data </mat-header-cell>
+      <mat-cell *matCellDef="let element;" [formGroup]="element">
+        <mat-form-field floatLabel="never">
+          <input
+            class="center-text"
+            type="date"
+            matInput
+            placeholder="Data"
+            formControlName="data"
+          />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <!-- punto_di_emissione Column -->
+    <ng-container matColumnDef="punto_di_emissione">
+      <mat-header-cell *matHeaderCellDef> Punto di Emissione </mat-header-cell>
+      <mat-cell *matCellDef="let element; let index = index" [formGroup]="element">
+        <mat-form-field floatLabel="never">
+          <input
+            class="center-text"
+            matInput
+            placeholder="Punto di emissione"
+            formControlName="punto_di_emissione"
+            [matAutocomplete]="auto"
+          />
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option
+              *ngFor="let option of filteredOptions[index] | async"
+              [value]="option.punto_di_emissione"
+              (click)="pdeChange(option, element)"
+            >
+              {{option.punto_di_emissione}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <!-- rapporto Column -->
+    <ng-container matColumnDef="rapporto">
+      <mat-header-cell *matHeaderCellDef> Rapporto </mat-header-cell>
+      <mat-cell *matCellDef="let element;" [formGroup]="element">
+        <mat-form-field floatLabel="never">
+          <input class="center-text" matInput placeholder="Rapporto" formControlName="rapporto" />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <!-- inquinante Column -->
+    <ng-container matColumnDef="inquinante">
+      <mat-header-cell *matHeaderCellDef> Inquinante </mat-header-cell>
+      <mat-cell *matCellDef="let element; let index = index" [formGroup]="element">
+        <mat-form-field floatLabel="never">
+          <input
+            class="center-text"
+            matInput
+            placeholder="Inquinante"
+            formControlName="inquinante"
+            [matAutocomplete]="autoInq"
+            (click)="resetInquinanti(element)"
+          />
+          <mat-autocomplete autoActiveFirstOption #autoInq="matAutocomplete">
+            <mat-option
+              *ngFor="let option of filteredInquinanti[index] | async"
+              [value]="option.nome"
+              (click)="inquinanteChange(option, element)"
+            >
+              {{option.nome}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <!-- c_rilevata Column -->
+    <ng-container matColumnDef="c_rilevata">
+      <mat-header-cell *matHeaderCellDef> C Rilevata (mg/Nm3) </mat-header-cell>
+      <mat-cell *matCellDef="let element;" [formGroup]="element">
+        <mat-form-field floatLabel="never">
+          <input
+            class="center-text"
+            type="number"
+            matInput
+            placeholder="C Rilevata"
+            formControlName="c_rilevata"
+          />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <!-- limiti_di_legge Column -->
+    <ng-container matColumnDef="limiti_di_legge">
+      <mat-header-cell *matHeaderCellDef> Limiti di Legge (mg/Nm3) </mat-header-cell>
+      <mat-cell *matCellDef="let element;" [formGroup]="element">
+        <mat-form-field floatLabel="never">
+          <input
+            class="center-text"
+            matInput
+            placeholder="Limiti di Legge"
+            formControlName="limiti_di_legge"
+            readonly
+          />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <!-- limite_al_100 Column -->
+    <ng-container matColumnDef="limite_al_100">
+      <mat-header-cell *matHeaderCellDef> Limite al 100% </mat-header-cell>
+      <mat-cell *matCellDef="let element;" [formGroup]="element">
+        <mat-form-field floatLabel="never">
+          <input
+            class="center-text"
+            matInput
+            placeholder="Limite al 100"
+            formControlName="limite_al_100"
+          />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <!-- limite_al_70 Column -->
+    <ng-container matColumnDef="limite_al_70">
+      <mat-header-cell *matHeaderCellDef> Limite al 70% </mat-header-cell>
+      <mat-cell *matCellDef="let element;" [formGroup]="element">
+        <mat-form-field floatLabel="never">
+          <input
+            class="center-text"
+            matInput
+            placeholder="Limite al 70"
+            formControlName="limite_al_70"
+          />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <!-- limite_al_50 Column -->
+    <ng-container matColumnDef="limite_al_50">
+      <mat-header-cell *matHeaderCellDef> Limite al 50% </mat-header-cell>
+      <mat-cell *matCellDef="let element;" [formGroup]="element">
+        <mat-form-field floatLabel="never">
+          <input
+            class="center-text"
+            matInput
+            placeholder="Limite al 50"
+            formControlName="limite_al_50"
+          />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <!-- limite_al_20 Column -->
+    <ng-container matColumnDef="limite_al_20">
+      <mat-header-cell *matHeaderCellDef> Limite al 20% </mat-header-cell>
+      <mat-cell *matCellDef="let element;" [formGroup]="element">
+        <mat-form-field floatLabel="never">
+          <input
+            class="center-text"
+            matInput
+            placeholder="Limite al 20"
+            formControlName="limite_al_20"
+          />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <!-- media_tutte_emissioni Column -->
+    <ng-container matColumnDef="media_tutte_emissioni">
+      <mat-header-cell *matHeaderCellDef> Media su tutte le emissioni </mat-header-cell>
+      <mat-cell *matCellDef="let element;" [formGroup]="element">
+        <mat-form-field floatLabel="never">
+          <input
+            class="center-text"
+            matInput
+            placeholder="media_tutte_emissioni"
+            formControlName="media_tutte_emissioni"
+          />
+        </mat-form-field>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="azioni">
+      <mat-header-cell *matHeaderCellDef>Azioni</mat-header-cell>
+      <mat-cell *matCellDef="let row; let index = index">
+        <mat-icon class="delete" title="Elimina" (click)="deleteRow($event, index)"
+          >delete</mat-icon
+        >
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <br />
+  <button type="button" mat-raised-button (click)="addRow()">Aggiungi riga</button>
+  &nbsp;
+  <button type="button" mat-raised-button color="primary" (click)="save()">Salva</button>
+</form>
+
+<!-- utile per debug 
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title> Form value </mat-panel-title>
+    </mat-expansion-panel-header>
+    <code> {{form.value | json}} </code>
+  </mat-expansion-panel>
+</mat-accordion>
+-->

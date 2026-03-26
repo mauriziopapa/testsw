@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" />
+  <!-- Use truetype format of the Google Web Fonts with base64 encode. -->
+
+  <!--<link rel="stylesheet" href="./css/pdf_style.css" />-->
+  $style
+  <title>Assessment</title>
+</head>
+<body>
+  <div id="pageHeader"><img alt="Logo Temprasud" src="data:image/png;base64,{{headerLogo}}" /></div>
+
+  <div id="pageContent">
+    <br />
+    <div>
+      <div>
+        <b>Report Assessment Trimestrale Temprasud</b>
+      </div>
+      <div><b>Trimestre:</b> {{assessment.[0].trimestre}} {{assessment.[0].anno}}</div>
+      <div><b>Cruscotto:</b> {{assessment.[0].nome_dashboard}}</div>
+      <div><b>Data documento: </b> {{dataDocumento}}</div>
+    </div>
+  </div>
+
+  <table style="border: 1px #eeeeee solid; border-collapse: collapse">
+    <thead style="background-color: #eeeeee">
+      <th>Screenshot</th>
+      <th>Note</th>
+    </thead>
+    <tbody>
+      {{#each assessment}}
+      <tr>
+        <td>
+          <img
+            src="data:image/png;base64,{{this.img64}}"
+            height="{{this.img_height}}"
+            width="{{this.img_width}}"
+            alt="Immagine non disponibile"
+          />
+          &nbsp;
+        </td>
+        <td style="vertical-align: top">
+          <p class="arial"><b>Analisi Risultati &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></p>
+          <p class="arial">{{this.nota_risultati}}</p>
+          <br />
+          <p class="arial"><b>Strategia futura &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></p>
+          <p class="arial">{{this.nota_strategia_futura}}</p>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</body>

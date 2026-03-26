@@ -1,0 +1,24 @@
+<h2>
+  Questa tabella mostra dei dati di riepilogo delle Commesse con Non Conformità (NC) di tipo Qualità
+  (TipoNC 7) ed Esterna (TipoNC 18) per anno.
+</h2>
+<h3 class="black-text">TipoNC 7 = Qualità</h3>
+<h3 class="black-text">TipoNC 18 = Esterna</h3>
+
+<div class="select-div">
+  <label class="year-select-label" for="years">Anno:</label>
+  <select
+    class="year-select"
+    id="years"
+    [(ngModel)]="selectedValue"
+    (ngModelChange)="onSelect($event)"
+  >
+    <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+  </select>
+</div>
+
+<generic-table
+  [dataSource]="dataSource"
+  [displayedColumns]="displayedColumns"
+  [columns]="columns"
+></generic-table>

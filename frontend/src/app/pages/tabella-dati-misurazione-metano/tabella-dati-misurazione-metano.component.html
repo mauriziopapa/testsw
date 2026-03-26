@@ -1,0 +1,65 @@
+<!--<h1 class="red-text">Tabella Dati Misurazione - Metano</h1>-->
+<h3>Attenzione: I mesi sono considerati della durata fissa di 28 giorni.</h3>
+<table-filters [tableName]="tableName" (tableSearch)="searchByTableFilters($event)"></table-filters>
+<br />
+<form [formGroup]="form">
+    <mat-table [dataSource]="dataSource" formArrayName="misurazioniMetano">
+        <!-- Row definitions -->
+        <mat-header-row mat-header-row *matHeaderRowDef="displayColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; let i = index; columns: displayColumns;"></mat-row>
+
+        <!-- Column definitions -->
+        <ng-container matColumnDef="data">
+            <mat-header-cell *matHeaderCellDef>Data</mat-header-cell>
+            <mat-cell *matCellDef="let row; let index = index" [formGroupName]="index">
+                <mat-form-field class="col-width">
+                    <input class="center-text" matInput type="date" value="" formControlName="data" />
+                </mat-form-field>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="nome_contatore">
+            <mat-header-cell *matHeaderCellDef>Contatore</mat-header-cell>
+            <mat-cell *matCellDef="let row; let index = index" [formGroupName]="index">
+                <mat-form-field class="col-width">
+                    <input class="center-text" type="text" matInput formControlName="nome_contatore"
+                        [matAutocomplete]="auto" />
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of filteredOptions[index] | async" [value]="option.nome">
+                            {{option.nome}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="misurazione">
+            <mat-header-cell *matHeaderCellDef>Misurazione</mat-header-cell>
+            <mat-cell *matCellDef="let row; let index = index" [formGroupName]="index">
+                <mat-form-field>
+                    <input class="center-text" matInput type="number" value="" formControlName="misurazione" />
+                </mat-form-field>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="udm">
+            <mat-header-cell *matHeaderCellDef>Udm</mat-header-cell>
+            <mat-cell *matCellDef="let row; let index = index" [formGroupName]="index">
+                <mat-form-field>
+                    <input class="center-text" matInput type="text" value="" formControlName="udm" readonly />
+                </mat-form-field>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="azioni">
+            <mat-header-cell *matHeaderCellDef>Azioni</mat-header-cell>
+            <mat-cell *matCellDef="let row; let index = index">
+                <mat-icon class="delete" title="Elimina" (click)="deleteRow($event, index)">delete</mat-icon>
+            </mat-cell>
+        </ng-container>
+    </mat-table>
+    <br />
+    <button type="button" mat-raised-button (click)="addRow()">Aggiungi riga</button>
+    &nbsp;
+    <button type="button" mat-raised-button color="primary" (click)="save()">Salva</button>
+</form>

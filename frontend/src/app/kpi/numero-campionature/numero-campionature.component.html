@@ -1,0 +1,17 @@
+<kpi-filters
+  [widgetInstance]="widget_instance"
+  [globalFilters]="global_filters"
+  [url]="url"
+  (filtersChange)="updateFiltersSelection($event)"
+  (search)="searchByFilters($event)"
+></kpi-filters>
+<stacked-bar-chart
+  [data]="currentData"
+  [name]="name"
+  [options]="currentOptions"
+></stacked-bar-chart>
+<div *ngIf="!isMobile">
+  <span class="orange"> Totale Automotive: {{tot_auto}} </span>
+  <span class="label blue"> Totale NON Automotive: {{tot_noauto}} </span>
+  <span> Totale: {{tot}} </span>
+</div>

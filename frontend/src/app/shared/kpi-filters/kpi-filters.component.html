@@ -1,0 +1,228 @@
+<div class="row">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <div class="inner">
+        <div class="item" *ngFor="let filter of filters">
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'monthpicker' && filter.name === 'dal_month'"
+          >
+            <input
+              matInput
+              [matDatepicker]="dpfrom"
+              placeholder="{{filter.lbl}}"
+              [formControl]="from"
+            />
+            <mat-datepicker-toggle matSuffix [for]="dpfrom"></mat-datepicker-toggle>
+            <mat-datepicker
+              #dpfrom
+              startView="multi-year"
+              (yearSelected)="chosenYearFromHandler($event)"
+              (monthSelected)="chosenMonthFromHandler($event, dpfrom)"
+              panelClass="example-month-picker"
+            >
+            </mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'monthpicker' && filter.name === 'al_month'"
+          >
+            <input
+              matInput
+              [matDatepicker]="dpto"
+              placeholder="{{filter.lbl}}"
+              [formControl]="to"
+            />
+            <mat-datepicker-toggle matSuffix [for]="dpto"></mat-datepicker-toggle>
+            <mat-datepicker
+              #dpto
+              startView="multi-year"
+              (yearSelected)="chosenYearToHandler($event)"
+              (monthSelected)="chosenMonthToHandler($event, dpto)"
+              panelClass="month-picker"
+            >
+            </mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && filter.lbl === 'Anno:'"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="year">
+              <mat-option *ngFor="let y of years" [value]="y.value"> {{y.viewValue}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && (filter.name === 'dal_anno_ts')"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="yearFrom">
+              <mat-option *ngFor="let y of years" [value]="y.value"> {{y.viewValue}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && (filter.name === 'al_anno_ts')"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="yearTo">
+              <mat-option *ngFor="let y of years" [value]="y.value"> {{y.viewValue}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && filter.name === 'reparto_ts'"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="reparto">
+              <mat-option *ngFor="let y of reparti" [value]="y.value"> {{y.viewValue}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && filter.name === 'pde_ts'"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="pde">
+              <mat-option *ngFor="let y of pdes" [value]="y.value"> {{y.viewValue}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && filter.name === 'zone_trasporti_ts'"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="zone">
+              <mat-option *ngFor="let y of zones" [value]="y.value"> {{y.viewValue}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && ['clienti_ts', 'clienti_ind_ts', 'clienti_ts_un'].includes(filter.name)"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="client" (selectionChange)="clientSelectionChange($event)">
+              <mat-option *ngFor="let y of clients" [value]="y.value"> {{y.viewValue}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && (filter.name === 'pezzi_ind_ts')"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="piece">
+              <mat-option *ngFor="let y of pieces" [value]="y.value"> {{y.viewValue}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && (filter.name === 'operatori_ind_ts')"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="operator">
+              <mat-option *ngFor="let y of operators" [value]="y.value">
+                {{y.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && (filter.name === 'materie_prime_ts')"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="material">
+              <mat-option *ngFor="let y of materials" [value]="y.value">
+                {{y.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && ['rischio_ts'].includes(filter.name)"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="risk" (selectionChange)="riskSelectionChange($event)">
+              <mat-option *ngFor="let y of risks" [value]="y.value"> {{y.viewValue}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && ['fornitori_ts', 'fornitori_mp_ts', 'fornitori_con_ordini_ts'].includes(filter.name)"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="supplier">
+              <mat-option *ngFor="let y of suppliers" [value]="y.value">
+                {{y.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && ['tipi_offerte_ts'].includes(filter.name)"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="offer">
+              <mat-option *ngFor="let y of offers" [value]="y.value"> {{y.viewValue}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'autocomplete' && ['macroaree_ts'].includes(filter.name)"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="macroarea">
+              <mat-option *ngFor="let y of macroareas" [value]="y.value">
+                {{y.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'combo' && filter.name !== 'target'"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="tipology">
+              <mat-option *ngFor="let type of typologies" [value]="type.value">
+                {{type.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field
+            class="field-width"
+            *ngIf="filter.type === 'combo' && filter.name === 'target'"
+          >
+            <mat-label>{{filter.lbl}}</mat-label>
+            <mat-select [formControl]="target">
+              <mat-option *ngFor="let type of targets" [value]="type.value">
+                {{type.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div *ngIf="filters && filters.length > 0" class="item-btn">
+          <button mat-stroked-button class="search-icon-kpi">
+            <mat-icon>search</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,81 @@
+<h2 *ngIf="can_force" class="black-text">
+  Per le caselle evidenziate di <span class="orange-background">arancione</span> il valore inserito
+  è stato forzato manualmente.
+</h2>
+<h2 *ngIf="can_force && forced" class="red">
+  Attenzione! Hai modificato i valori della tabella, salvando adesso, le caselle di colore arancione
+  verranno identificate come forzature e non verranno più aggiornate automaticamente. <br />
+  Se non vuoi che questo accada, oppure se hai modificato per errore, ricarica la pagina senza
+  salvare per ripristinare i dati originari. Inserendo il valore 0, invece, verrà ripristinato il
+  valore di default e il dato tornerà ad essere sincronizzato se non è più vecchio di 2 mesi.
+</h2>
+<div class="table">
+  <div class="row-head-month fixed-month" *ngIf="anni.length > 0">
+    <div class="nome-kpi fixed-month">&nbsp;</div>
+    <div class="month bold fixed-month" *ngFor="let anno of anni">{{anno}}</div>
+  </div>
+
+  <div [ngClass]="anni.length > 0 ? 'row-head fixed' : 'row-head fixed-concorrenti'">
+    <div [ngClass]="anni.length > 0 ? 'nome-kpi fixed' : 'nome-kpi fixed-concorrenti'"></div>
+    <div
+      [ngClass]="anni.length > 0 ? 'impianto bold fixed' : 'impianto bold fixed-concorrenti'"
+      *ngFor="let mese of mesi"
+    >
+      {{mese.nome_mese}}
+    </div>
+  </div>
+
+  <div class="row" *ngFor="let row of kpi_rows; let odd=odd; let even=even ">
+    <div
+      class="nome-kpi bold"
+      [ngClass]="{ odd: odd, even: even }"
+      matTooltip="{{row.tooltip}}"
+      matTooltipClass="tooltip"
+    >
+      <div>
+        <span [ngClass]="row.azienda != null ? 'kpi-name' : ''"> {{row.nome_kpi}} </span>
+        <p class="azienda" [ngClass]="getColorClass(row.azienda)" *ngIf="row.azienda">
+          {{row.azienda}}
+        </p>
+      </div>
+    </div>
+    <div class="kpi-row" [ngClass]="{ odd: odd, even: even }">
+      <div [ngSwitch]="row.calcolato" class="kpi-row">
+        <!--RIGHE CON CAMPI CALCOLATI es. %-->
+        <div *ngSwitchCase="1" class="kpi-row">
+          <!--somma -->
+          <div class="kpi-val somma not-allowed" *ngFor="let mese of mesi; let i = index">
+            <input
+              [ngClass]="row.format === 'perc' ? 'input-perc bold' : 'input bold'"
+              type="text"
+              title="{{row.tooltip}}"
+              id="somma{{row.id}}"
+              [value]="row.valori[i].val | percentage:row.format"
+              matTooltip="{{row.tooltip}}"
+              matTooltipClass="tooltip"
+              readonly
+            />
+          </div>
+        </div>
+
+        <!--RIGHE CHE IDENTIFICANO KPI-->
+        <div *ngSwitchDefault class="kpi-row">
+          <div
+            class="kpi-val"
+            [ngClass]="can_force && row.valori[i].forzatura_manuale ? 'orange-background' : ''"
+            *ngFor="let mese of mesi; let i = index"
+          >
+            <input
+              class="input"
+              type="text"
+              title="valore kpi"
+              *ngIf="row.valori[i]"
+              [(ngModel)]="row.valori[i].val"
+              (ngModelChange)="inputChanged(row, mese, row.valori[i])"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+name: Deploy to SAPERE FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    - name: Install Dependencies
+      working-directory: frontend
+      run: npm install
+
+    - name: Build Angular Project
+      working-directory: frontend
+      run: npm run build-production
+
+    - name: Deploy Angular Frontend to FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SAPERE_HOST }}
+        username: ${{ secrets.FTP_SAPERE_USERNAME }}
+        password: ${{ secrets.FTP_SAPERE_PASSWORD }}
+        server-dir: ./dist/
+        local-dir: ./frontend/dist/sapere-temprasud/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules*/**
+          **/config**
+          **/config/index.js**
+          **/.env.local**
+          **/.env.test**
+          **/.env.production**
+          **/logs**
+          **/.eslintrc.js**
+          **/.prettierrc**
+          **/package.json**
+        dangerous-clean-slate: false
+        dry-run: false
+
+    - name: Deploy Express Backend to FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SAPERE_HOST }}
+        username: ${{ secrets.FTP_SAPERE_USERNAME }}
+        password: ${{ secrets.FTP_SAPERE_PASSWORD }}
+        server-dir: ./server/
+        local-dir: ./backend/server/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules*/**
+          **/config**
+          **/config/index.js**
+          **/.env.local**
+          **/.env.test**
+          **/.env.production**
+          **/logs**
+          **/.eslintrc.js**
+          **/.prettierrc**
+          **/package.json**
+        dangerous-clean-slate: false
+        dry-run: false
+
+    - name: Kill Express Process
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.SSH_HOST_NAME }}
+        passphrase: ${{ secrets.SSH_PASSPHRASE }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_SECRET_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        script: |
+          ps aux
+          pkill -9 -f sapere

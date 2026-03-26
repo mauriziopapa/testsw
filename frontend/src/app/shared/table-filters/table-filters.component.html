@@ -1,0 +1,108 @@
+<mat-card class="card-background">
+  <mat-card-title></mat-card-title>
+  <mat-accordion>
+    <mat-expansion-panel
+      class="mat-elevation-z0 card-background"
+      [expanded]="panelOpenState"
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header [collapsedHeight]="'2.2em'" [expandedHeight]="'2.5em'">
+        <mat-panel-title> Filtra per: </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <mat-card-content class="margin">
+        <div class="row">
+          <form [formGroup]="tableFiltersForm" (ngSubmit)="onSubmit()">
+            <div class="container">
+              <div class="inner">
+                <div class="item">
+                  <mat-form-field
+                    class="field-width"
+                    *ngIf="!['tabella-direzione', 'tabella-concorrenti'].includes(tableName)"
+                  >
+                    <mat-label>Anno:</mat-label>
+                    <mat-select [formControl]="tableYear">
+                      <mat-option *ngFor="let year of tableYears" [value]="year.value">
+                        {{year.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field
+                    class="field-width"
+                    *ngIf="['report-resa-carica-media'].includes(tableName)"
+                  >
+                    <mat-label>Reparto:</mat-label>
+                    <mat-select [formControl]="tableReparto">
+                      <mat-option *ngFor="let reparto of tableReparti" [value]="reparto.value">
+                        {{reparto.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field
+                    class="field-width"
+                    *ngIf="['tabella-impianti', 'tabella-impianti-ind', 'tabella-impianti-fvf', 'tabella-dati-emissioni'].includes(tableName)"
+                  >
+                    <mat-label>Mese:</mat-label>
+                    <mat-select [formControl]="tableMonth">
+                      <mat-option *ngFor="let month of tableMonths" [value]="month.value">
+                        {{month.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field
+                    class="field-width"
+                    *ngIf="['tabella-direzione', 'tabella-concorrenti'].includes(tableName)"
+                  >
+                    <mat-label>Dall'anno:</mat-label>
+                    <mat-select [formControl]="tableYearFrom">
+                      <mat-option *ngFor="let year of tableYears" [value]="year.value">
+                        {{year.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field
+                    class="field-width"
+                    *ngIf="['tabella-direzione', 'tabella-concorrenti'].includes(tableName)"
+                  >
+                    <mat-label>All'anno:</mat-label>
+                    <mat-select [formControl]="tableYearTo">
+                      <mat-option *ngFor="let year of tableYears" [value]="year.value">
+                        {{year.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field
+                    class="field-width"
+                    *ngIf="['tabella-ritardo-manutenzione'].includes(tableName)"
+                  >
+                    <mat-label>Tipologia:</mat-label>
+                    <mat-select [formControl]="maintenanceType">
+                      <mat-option
+                        *ngFor="let mainType of maintenanceTypes"
+                        [value]="mainType.value"
+                      >
+                        {{mainType.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div>
+                  <button mat-stroked-button>
+                    CERCA
+                    <mat-icon>search</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </mat-card-content>
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-card>
