@@ -7,11 +7,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'analisi-perdite-induzione-pie',
-  standalone: true,
-  imports: [PieChartModule, SharedModule],
-  templateUrl: './analisi-perdite-induzione-pie.component.html',
-  styleUrls: ['./analisi-perdite-induzione-pie.component.scss']
+    selector: 'analisi-perdite-induzione-pie',
+    imports: [PieChartModule, SharedModule],
+    templateUrl: './analisi-perdite-induzione-pie.component.html',
+    styleUrls: ['./analisi-perdite-induzione-pie.component.scss']
 })
 export class AnalisiPerditeInduzionePieComponent extends AbstractKPIComponent {
   override name = 'analisi-perdite-induzione-pie';

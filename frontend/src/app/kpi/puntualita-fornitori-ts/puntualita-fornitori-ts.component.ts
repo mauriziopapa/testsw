@@ -7,11 +7,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { ChartTarget } from 'src/app/models/chart-target';
 
 @Component({
-  selector: 'puntualita-fornitori-ts',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './puntualita-fornitori-ts.component.html',
-  styleUrls: ['./puntualita-fornitori-ts.component.scss']
+    selector: 'puntualita-fornitori-ts',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './puntualita-fornitori-ts.component.html',
+    styleUrls: ['./puntualita-fornitori-ts.component.scss']
 })
 export class PuntualitaFornitoriTSComponent extends AbstractKPIComponent {
   override name = 'puntualita-fornitori-ts';

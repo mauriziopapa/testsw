@@ -9,9 +9,10 @@ import { ResaCaricaMediaService } from 'src/app/services/resa-carica.service';
 import { FailSnackbarComponent } from 'src/app/shared/fail-snackbar/fail-snackbar.component';
 
 @Component({
-  selector: 'report-resa-carica-media',
-  templateUrl: './report-resa-carica-media.component.html',
-  styleUrls: ['./report-resa-carica-media.component.scss']
+    selector: 'report-resa-carica-media',
+    templateUrl: './report-resa-carica-media.component.html',
+    styleUrls: ['./report-resa-carica-media.component.scss'],
+    standalone: false
 })
 export class ReportResaCaricaMediaComponent {
   tableName = 'report-resa-carica-media';

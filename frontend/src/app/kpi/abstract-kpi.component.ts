@@ -12,9 +12,10 @@ import { DashboardService } from '../services/dashboard.service';
 import { fromEvent, Subscription } from 'rxjs';
 
 @Component({
-  selector: 'base-kpi',
-  template: ` <p></p> `,
-  styles: []
+    selector: 'base-kpi',
+    template: ` <p></p> `,
+    styles: [],
+    standalone: false
 })
 export abstract class AbstractKPIComponent implements AfterViewInit {
   name = '';

@@ -9,11 +9,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'resa-media-trasporti',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './resa-media-trasporti.component.html',
-  styleUrls: ['./resa-media-trasporti.component.scss']
+    selector: 'resa-media-trasporti',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './resa-media-trasporti.component.html',
+    styleUrls: ['./resa-media-trasporti.component.scss']
 })
 export class ResaMediaTrasportiComponent extends AbstractKPIComponent {
   override name = 'resa-media-trasporti';

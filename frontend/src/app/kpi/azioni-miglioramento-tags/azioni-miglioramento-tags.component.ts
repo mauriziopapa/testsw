@@ -7,11 +7,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { ChartTarget } from 'src/app/models/chart-target';
 
 @Component({
-  selector: 'azioni-miglioramento-tags',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './azioni-miglioramento-tags.component.html',
-  styleUrls: ['./azioni-miglioramento-tags.component.scss']
+    selector: 'azioni-miglioramento-tags',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './azioni-miglioramento-tags.component.html',
+    styleUrls: ['./azioni-miglioramento-tags.component.scss']
 })
 export class AzioniMiglioramentoTagsComponent extends AbstractKPIComponent {
   override name = 'azioni-miglioramento-tags';

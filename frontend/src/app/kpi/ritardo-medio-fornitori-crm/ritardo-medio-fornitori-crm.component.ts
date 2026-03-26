@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'ritardo-medio-fornitori-crm',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './ritardo-medio-fornitori-crm.component.html',
-  styleUrls: ['./ritardo-medio-fornitori-crm.component.scss']
+    selector: 'ritardo-medio-fornitori-crm',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './ritardo-medio-fornitori-crm.component.html',
+    styleUrls: ['./ritardo-medio-fornitori-crm.component.scss']
 })
 export class RitardoMedioFornitoriCRMComponent extends AbstractKPIComponent {
   override name = 'ritardo-medio-fornitori-crm';

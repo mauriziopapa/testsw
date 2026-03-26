@@ -4,11 +4,10 @@ import { ReportService } from 'src/app/services/report.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @Component({
-  selector: 'report-induzione',
-  standalone: true,
-  imports: [SharedModule],
-  templateUrl: './report-induzione.component.html',
-  styleUrls: ['./report-induzione.component.scss']
+    selector: 'report-induzione',
+    imports: [SharedModule],
+    templateUrl: './report-induzione.component.html',
+    styleUrls: ['./report-induzione.component.scss']
 })
 export class ReportInduzioneComponent {
   name = 'report-induzione';

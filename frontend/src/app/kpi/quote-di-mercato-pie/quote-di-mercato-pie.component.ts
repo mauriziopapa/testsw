@@ -7,11 +7,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'quote-di-mercato-pie',
-  standalone: true,
-  imports: [PieChartModule, SharedModule],
-  templateUrl: './quote-di-mercato-pie.component.html',
-  styleUrls: ['./quote-di-mercato-pie.component.scss']
+    selector: 'quote-di-mercato-pie',
+    imports: [PieChartModule, SharedModule],
+    templateUrl: './quote-di-mercato-pie.component.html',
+    styleUrls: ['./quote-di-mercato-pie.component.scss']
 })
 export class QuoteDiMercatoPieComponent extends AbstractKPIComponent {
   override name = 'quote-di-mercato-pie';

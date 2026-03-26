@@ -7,11 +7,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'registro-induzione-ponderato',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './registro-induzione-ponderato.component.html',
-  styleUrls: ['./registro-induzione-ponderato.component.scss']
+    selector: 'registro-induzione-ponderato',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './registro-induzione-ponderato.component.html',
+    styleUrls: ['./registro-induzione-ponderato.component.scss']
 })
 export class RegistroInduzionePonderatoComponent extends AbstractKPIComponent {
   override name = 'registro-induzione-ponderato';

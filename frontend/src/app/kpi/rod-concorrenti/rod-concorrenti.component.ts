@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'rod-concorrenti',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './rod-concorrenti.component.html',
-  styleUrls: ['./rod-concorrenti.component.scss']
+    selector: 'rod-concorrenti',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './rod-concorrenti.component.html',
+    styleUrls: ['./rod-concorrenti.component.scss']
 })
 export class RodConcorrentiComponent extends AbstractKPIComponent {
   override name = 'rod-concorrenti';

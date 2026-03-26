@@ -8,11 +8,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { KpiOptions } from 'src/app/models/kpi-options';
 
 @Component({
-  selector: 'rapidita-manutenzione',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './rapidita-manutenzione.component.html',
-  styleUrls: ['./rapidita-manutenzione.component.scss']
+    selector: 'rapidita-manutenzione',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './rapidita-manutenzione.component.html',
+    styleUrls: ['./rapidita-manutenzione.component.scss']
 })
 export class RapiditaManutenzioneComponent extends AbstractKPIComponent {
   override name = 'rapidita-manutenzione';

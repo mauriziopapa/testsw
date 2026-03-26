@@ -1,13 +1,14 @@
 import moment from 'moment';
 import { Component } from '@angular/core';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { TimbrateNc } from 'src/app/models/timbrate-nc';
 import { TimbrateNcService } from 'src/app/services/timbrate-nc.service';
 
 @Component({
-  selector: 'tabella-timbrate-nc',
-  templateUrl: './tabella-timbrate-nc.component.html',
-  styleUrls: ['./tabella-timbrate-nc.component.scss']
+    selector: 'tabella-timbrate-nc',
+    templateUrl: './tabella-timbrate-nc.component.html',
+    styleUrls: ['./tabella-timbrate-nc.component.scss'],
+    standalone: false
 })
 export class TabellaTimbrateNcComponent {
   dataSource: MatTableDataSource<TimbrateNc>;

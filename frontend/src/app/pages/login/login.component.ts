@@ -6,9 +6,10 @@ import { LoginRequest } from 'src/app/models/login.request';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
-  selector: 'login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+    selector: 'login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss'],
+    standalone: false
 })
 export class LoginComponent {
   form: FormGroup;

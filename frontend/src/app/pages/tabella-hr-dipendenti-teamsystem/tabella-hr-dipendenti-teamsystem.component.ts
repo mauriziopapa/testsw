@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { HrDipendentiTeamsystem } from 'src/app/models/teamsystem-hr-dipendenti';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { HrDipendentiTeamsystemService } from 'src/app/services/hr-dipendenti-teamsystem.service';
 
 @Component({
-  selector: 'tabella-hr-dipendenti-teamsystem',
-  templateUrl: './tabella-hr-dipendenti-teamsystem.component.html',
-  styleUrls: ['./tabella-hr-dipendenti-teamsystem.component.scss']
+    selector: 'tabella-hr-dipendenti-teamsystem',
+    templateUrl: './tabella-hr-dipendenti-teamsystem.component.html',
+    styleUrls: ['./tabella-hr-dipendenti-teamsystem.component.scss'],
+    standalone: false
 })
 export class TabellaHrDipendentiTeamSystemComponent {
   dataSource: MatTableDataSource<HrDipendentiTeamsystem>;

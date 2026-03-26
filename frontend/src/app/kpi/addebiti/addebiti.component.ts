@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'addebiti',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './addebiti.component.html',
-  styleUrls: ['./addebiti.component.scss']
+    selector: 'addebiti',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './addebiti.component.html',
+    styleUrls: ['./addebiti.component.scss']
 })
 export class AddebitiComponent extends AbstractKPIComponent {
   override name = 'addebiti';

@@ -12,11 +12,11 @@ import { HttpErrorInterceptor } from './error.interceptor';
 import { NetworkInterceptor } from './network.interceptor';
 import { ErrorComponent } from './error/error.component';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
-import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
-import { MatLegacyProgressSpinnerModule as MatProgressSpinnerModule } from '@angular/material/legacy-progress-spinner';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
-import { MatLegacyListModule as MatListModule } from '@angular/material/legacy-list';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [MainLayoutComponent, ErrorComponent],

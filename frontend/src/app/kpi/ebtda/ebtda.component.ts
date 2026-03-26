@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'ebtda',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './ebtda.component.html',
-  styleUrls: ['./ebtda.component.scss']
+    selector: 'ebtda',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './ebtda.component.html',
+    styleUrls: ['./ebtda.component.scss']
 })
 export class EBTDAComponent extends AbstractKPIComponent {
   override name = 'ebtda';

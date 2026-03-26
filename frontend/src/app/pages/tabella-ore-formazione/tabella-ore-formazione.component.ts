@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { OreFormazione } from 'src/app/models/ore-formazione';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { OreFormazioneService } from 'src/app/services/ore-formazione.service';
 
 @Component({
-  selector: 'tabella-ore-formazione',
-  templateUrl: './tabella-ore-formazione.component.html',
-  styleUrls: ['./tabella-ore-formazione.component.scss']
+    selector: 'tabella-ore-formazione',
+    templateUrl: './tabella-ore-formazione.component.html',
+    styleUrls: ['./tabella-ore-formazione.component.scss'],
+    standalone: false
 })
 export class TabellaOreFormazioneComponent {
   dataSource: MatTableDataSource<OreFormazione>;

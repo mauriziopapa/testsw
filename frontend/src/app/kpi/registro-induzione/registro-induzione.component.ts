@@ -6,11 +6,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'registro-induzione',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './registro-induzione.component.html',
-  styleUrls: ['./registro-induzione.component.scss']
+    selector: 'registro-induzione',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './registro-induzione.component.html',
+    styleUrls: ['./registro-induzione.component.scss']
 })
 export class RegistroInduzioneComponent extends AbstractKPIComponent {
   override name = 'registro-induzione';

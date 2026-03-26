@@ -8,9 +8,10 @@ import { FailSnackbarComponent } from 'src/app/shared/fail-snackbar/fail-snackba
 import { SuccessSnackbarComponent } from 'src/app/shared/success-snackbar/success-snackbar.component';
 
 @Component({
-  selector: 'tabella-dati-laboratorio',
-  templateUrl: './tabella-dati-laboratorio.component.html',
-  styleUrls: ['./tabella-dati-laboratorio.component.scss']
+    selector: 'tabella-dati-laboratorio',
+    templateUrl: './tabella-dati-laboratorio.component.html',
+    styleUrls: ['./tabella-dati-laboratorio.component.scss'],
+    standalone: false
 })
 export class TabellaDatiLaboratorioComponent {
   tableName = 'tabella-dati-laboratorio';

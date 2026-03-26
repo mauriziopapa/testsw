@@ -3,9 +3,10 @@ import { Chart, ChartConfiguration, ChartItem, registerables } from 'node_module
 import { AbstractChartComponent } from '../chart/chart.component';
 
 @Component({
-  selector: 'stacked-bar-chart',
-  templateUrl: './stacked-bar-chart.component.html',
-  styleUrls: ['./stacked-bar-chart.component.scss']
+    selector: 'stacked-bar-chart',
+    templateUrl: './stacked-bar-chart.component.html',
+    styleUrls: ['./stacked-bar-chart.component.scss'],
+    standalone: false
 })
 export class StackedBarChartComponent
   extends AbstractChartComponent

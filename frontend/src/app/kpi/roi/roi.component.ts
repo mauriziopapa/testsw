@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'roi',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './roi.component.html',
-  styleUrls: ['./roi.component.scss']
+    selector: 'roi',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './roi.component.html',
+    styleUrls: ['./roi.component.scss']
 })
 export class ROIComponent extends AbstractKPIComponent {
   override name = 'roi';

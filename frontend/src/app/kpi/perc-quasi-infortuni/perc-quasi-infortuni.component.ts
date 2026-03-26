@@ -9,11 +9,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'perc-quasi-infortuni',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './perc-quasi-infortuni.component.html',
-  styleUrls: ['./perc-quasi-infortuni.component.scss']
+    selector: 'perc-quasi-infortuni',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './perc-quasi-infortuni.component.html',
+    styleUrls: ['./perc-quasi-infortuni.component.scss']
 })
 export class PercQuasiInfortuniComponent extends AbstractKPIComponent {
   override name = 'perc-quasi-infortuni';

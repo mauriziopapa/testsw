@@ -4,11 +4,10 @@ import { ReportService } from 'src/app/services/report.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @Component({
-  selector: 'report-commerciale',
-  standalone: true,
-  imports: [SharedModule],
-  templateUrl: './report-commerciale.component.html',
-  styleUrls: ['./report-commerciale.component.scss']
+    selector: 'report-commerciale',
+    imports: [SharedModule],
+    templateUrl: './report-commerciale.component.html',
+    styleUrls: ['./report-commerciale.component.scss']
 })
 export class ReportCommercialeComponent {
   name = 'report-commerciale';

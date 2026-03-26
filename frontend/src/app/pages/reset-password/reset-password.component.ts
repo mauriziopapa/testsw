@@ -6,9 +6,10 @@ import { ResetPasswordService } from 'src/app/services/reset-password.service';
 import { KpiDialogComponent } from 'src/app/shared/kpi-dialog/kpi-dialog.component';
 
 @Component({
-  selector: 'reset-password',
-  templateUrl: './reset-password.component.html',
-  styleUrls: ['./reset-password.component.scss']
+    selector: 'reset-password',
+    templateUrl: './reset-password.component.html',
+    styleUrls: ['./reset-password.component.scss'],
+    standalone: false
 })
 export class ResetPasswordComponent {
   form: FormGroup;

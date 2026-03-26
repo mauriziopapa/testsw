@@ -9,9 +9,10 @@ import { FailSnackbarComponent } from 'src/app/shared/fail-snackbar/fail-snackba
 import { SuccessSnackbarComponent } from 'src/app/shared/success-snackbar/success-snackbar.component';
 
 @Component({
-  selector: 'tabella-dati-rifiuti',
-  templateUrl: './tabella-dati-rifiuti.component.html',
-  styleUrls: ['./tabella-dati-rifiuti.component.scss']
+    selector: 'tabella-dati-rifiuti',
+    templateUrl: './tabella-dati-rifiuti.component.html',
+    styleUrls: ['./tabella-dati-rifiuti.component.scss'],
+    standalone: false
 })
 export class TabellaDatiRifiutiComponent {
   tableName = 'tabella-rifiuti';

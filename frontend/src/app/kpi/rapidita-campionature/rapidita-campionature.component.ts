@@ -9,11 +9,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'rapidita-campionature',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './rapidita-campionature.component.html',
-  styleUrls: ['./rapidita-campionature.component.scss']
+    selector: 'rapidita-campionature',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './rapidita-campionature.component.html',
+    styleUrls: ['./rapidita-campionature.component.scss']
 })
 export class RapiditaCampionatureComponent extends AbstractKPIComponent {
   override name = 'rapidita-campionature';

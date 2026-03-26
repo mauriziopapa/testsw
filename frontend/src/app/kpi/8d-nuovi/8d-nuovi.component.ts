@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'd8-nuovi',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './8d-nuovi.component.html',
-  styleUrls: ['./8d-nuovi.component.scss']
+    selector: 'd8-nuovi',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './8d-nuovi.component.html',
+    styleUrls: ['./8d-nuovi.component.scss']
 })
 export class D8NuoviComponent extends AbstractKPIComponent {
   override name = '8d-nuovi';

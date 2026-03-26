@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { ZohoTask } from 'src/app/models/zoho-task';
 import { ZohoTasksService } from 'src/app/services/zoho-tasks.service';
 
 @Component({
-  selector: 'tabella-zoho-tasks',
-  templateUrl: './tabella-zoho-tasks.component.html',
-  styleUrls: ['./tabella-zoho-tasks.component.scss']
+    selector: 'tabella-zoho-tasks',
+    templateUrl: './tabella-zoho-tasks.component.html',
+    styleUrls: ['./tabella-zoho-tasks.component.scss'],
+    standalone: false
 })
 export class TabellaZohoTasksComponent {
   dataSource: MatTableDataSource<ZohoTask>;

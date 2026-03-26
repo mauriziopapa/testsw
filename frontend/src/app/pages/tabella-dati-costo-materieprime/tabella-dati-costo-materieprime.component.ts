@@ -9,9 +9,10 @@ import { FailSnackbarComponent } from 'src/app/shared/fail-snackbar/fail-snackba
 import { SuccessSnackbarComponent } from 'src/app/shared/success-snackbar/success-snackbar.component';
 
 @Component({
-  selector: 'tabella-dati-costo-materieprime',
-  templateUrl: './tabella-dati-costo-materieprime.component.html',
-  styleUrls: ['./tabella-dati-costo-materieprime.component.scss']
+    selector: 'tabella-dati-costo-materieprime',
+    templateUrl: './tabella-dati-costo-materieprime.component.html',
+    styleUrls: ['./tabella-dati-costo-materieprime.component.scss'],
+    standalone: false
 })
 export class TabellaDatiCostoMateriePrimeComponent {
   tableName = 'tabella-dati-costo-materieprime';

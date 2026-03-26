@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppGuard } from 'src/app/helpers/app.guard';
+import { appGuard } from 'src/app/helpers/app.guard';
 import { TabellaCommesseNcComponent } from './tabella-commesse-nc.component';
 
 const routes: Routes = [
-  { path: '', component: TabellaCommesseNcComponent, canActivate: [AppGuard] }
+  { path: '', component: TabellaCommesseNcComponent, canActivate: [appGuard] }
 ];
 
 @NgModule({

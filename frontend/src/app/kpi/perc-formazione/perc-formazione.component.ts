@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'perc-formazione',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './perc-formazione.component.html',
-  styleUrls: ['./perc-formazione.component.scss']
+    selector: 'perc-formazione',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './perc-formazione.component.html',
+    styleUrls: ['./perc-formazione.component.scss']
 })
 export class PercFormazioneComponent extends AbstractKPIComponent {
   override name = 'perc-formazione';

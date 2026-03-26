@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'ppm-scarti',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './ppm-scarti.component.html',
-  styleUrls: ['./ppm-scarti.component.scss']
+    selector: 'ppm-scarti',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './ppm-scarti.component.html',
+    styleUrls: ['./ppm-scarti.component.scss']
 })
 export class PPMScartiComponent extends AbstractKPIComponent {
   override name = 'ppm-scarti';

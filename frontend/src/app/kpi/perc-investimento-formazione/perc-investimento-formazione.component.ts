@@ -9,11 +9,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'perc-investimento-formazione',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './perc-investimento-formazione.component.html',
-  styleUrls: ['./perc-investimento-formazione.component.scss']
+    selector: 'perc-investimento-formazione',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './perc-investimento-formazione.component.html',
+    styleUrls: ['./perc-investimento-formazione.component.scss']
 })
 export class PercInvestimentoFormazioneComponent extends AbstractKPIComponent {
   override name = 'perc-investimento-formazione';

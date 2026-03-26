@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'perc-insoluti',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './perc-insoluti.component.html',
-  styleUrls: ['./perc-insoluti.component.scss']
+    selector: 'perc-insoluti',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './perc-insoluti.component.html',
+    styleUrls: ['./perc-insoluti.component.scss']
 })
 export class PercInsolutiComponent extends AbstractKPIComponent {
   override name = 'perc-insoluti';

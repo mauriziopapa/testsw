@@ -9,11 +9,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'perc-crediti-inesigibili',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './perc-crediti-inesigibili.component.html',
-  styleUrls: ['./perc-crediti-inesigibili.component.scss']
+    selector: 'perc-crediti-inesigibili',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './perc-crediti-inesigibili.component.html',
+    styleUrls: ['./perc-crediti-inesigibili.component.scss']
 })
 export class PercCreditiInesigibiliComponent extends AbstractKPIComponent {
   override name = 'perc-crediti-inesigibili';

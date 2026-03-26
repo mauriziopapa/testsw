@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './core/error/error.component';
 import { MainLayoutComponent } from './core/layout/main-layout/main-layout.component';
-import { AppGuard } from './helpers/app.guard';
+import { appGuard, appGuardChild } from './helpers/app.guard';
 
 const routes: Routes = [
   {
@@ -16,8 +16,8 @@ const routes: Routes = [
   },
   {
     path: '',
-    canActivate: [AppGuard],
-    canActivateChild: [AppGuard],
+    canActivate: [appGuard],
+    canActivateChild: [appGuardChild],
     component: MainLayoutComponent,
     children: [
       {

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppGuard } from 'src/app/helpers/app.guard';
+import { appGuard } from 'src/app/helpers/app.guard';
 import { TabellaRifiutiLavorazioniComponent } from './tabella-rifiuti-lavorazioni.component';
 
 const routes: Routes = [
-  { path: '', component: TabellaRifiutiLavorazioniComponent, canActivate: [AppGuard] }
+  { path: '', component: TabellaRifiutiLavorazioniComponent, canActivate: [appGuard] }
 ];
 
 @NgModule({

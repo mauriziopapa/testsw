@@ -9,11 +9,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { KpiOptions } from 'src/app/models/kpi-options';
 
 @Component({
-  selector: 'mean-time-between-repair-ALU',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './mean-time-between-repair-ALU.component.html',
-  styleUrls: ['./mean-time-between-repair-ALU.component.scss']
+    selector: 'mean-time-between-repair-ALU',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './mean-time-between-repair-ALU.component.html',
+    styleUrls: ['./mean-time-between-repair-ALU.component.scss']
 })
 export class MeanTimeBetweenRepairALUComponent extends AbstractKPIComponent {
   override name = 'mean-time-between-repair-ALU';

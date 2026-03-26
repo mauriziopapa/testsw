@@ -8,11 +8,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { ChartData } from 'src/app/models/chart-data';
 
 @Component({
-  selector: 'interventi-richiesti-da-produzione',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './interventi-richiesti-da-produzione.component.html',
-  styleUrls: ['./interventi-richiesti-da-produzione.component.scss']
+    selector: 'interventi-richiesti-da-produzione',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './interventi-richiesti-da-produzione.component.html',
+    styleUrls: ['./interventi-richiesti-da-produzione.component.scss']
 })
 export class InterventiRichiestiDaProduzioneComponent extends AbstractKPIComponent {
   override name = 'interventi-richiesti-da-produzione';

@@ -7,11 +7,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'azioni-miglioramento-new',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './azioni-miglioramento-new.component.html',
-  styleUrls: ['./azioni-miglioramento-new.component.scss']
+    selector: 'azioni-miglioramento-new',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './azioni-miglioramento-new.component.html',
+    styleUrls: ['./azioni-miglioramento-new.component.scss']
 })
 export class AzioniMiglioramentoNewComponent extends AbstractKPIComponent {
   override name = 'azioni-miglioramento-new';

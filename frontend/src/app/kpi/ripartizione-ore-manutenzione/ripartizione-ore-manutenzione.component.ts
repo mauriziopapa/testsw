@@ -10,11 +10,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { Scale } from 'chart.js';
 
 @Component({
-  selector: 'ripartizione-ore-manutenzione',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './ripartizione-ore-manutenzione.component.html',
-  styleUrls: ['./ripartizione-ore-manutenzione.component.scss']
+    selector: 'ripartizione-ore-manutenzione',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './ripartizione-ore-manutenzione.component.html',
+    styleUrls: ['./ripartizione-ore-manutenzione.component.scss']
 })
 export class RipartizioneOreManutenzioneComponent extends AbstractKPIComponent {
   override name = 'ripartizione-ore-manutenzione';

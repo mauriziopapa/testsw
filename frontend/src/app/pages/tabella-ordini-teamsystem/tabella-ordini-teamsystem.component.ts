@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { TeamsystemOrdini } from 'src/app/models/teamsystem-ordini';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { CurrencyPipe } from '@angular/common';
 import { OrdiniTeamSystemService } from 'src/app/services/ordini-teamsystem.service';
 
 @Component({
-  selector: 'tabella-teamsystem-ordini-clienti',
-  templateUrl: './tabella-ordini-teamsystem.component.html',
-  styleUrls: ['./tabella-ordini-teamsystem.component.scss']
+    selector: 'tabella-teamsystem-ordini-clienti',
+    templateUrl: './tabella-ordini-teamsystem.component.html',
+    styleUrls: ['./tabella-ordini-teamsystem.component.scss'],
+    standalone: false
 })
 export class TabellaOrdiniTeamSystemComponent {
   dataSource: MatTableDataSource<TeamsystemOrdini>;

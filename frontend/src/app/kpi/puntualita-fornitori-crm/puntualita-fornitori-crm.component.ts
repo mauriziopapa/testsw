@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'puntualita-fornitori-crm',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './puntualita-fornitori-crm.component.html',
-  styleUrls: ['./puntualita-fornitori-crm.component.scss']
+    selector: 'puntualita-fornitori-crm',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './puntualita-fornitori-crm.component.html',
+    styleUrls: ['./puntualita-fornitori-crm.component.scss']
 })
 export class PuntualitaFornitoriCRMComponent extends AbstractKPIComponent {
   override name = 'puntualita-fornitori-crm';

@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'variazione-prezzi',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './variazione-prezzi.component.html',
-  styleUrls: ['./variazione-prezzi.component.scss']
+    selector: 'variazione-prezzi',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './variazione-prezzi.component.html',
+    styleUrls: ['./variazione-prezzi.component.scss']
 })
 export class VariazionePrezziComponent extends AbstractKPIComponent {
   override name = 'variazione-prezzi';

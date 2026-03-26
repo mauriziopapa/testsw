@@ -9,9 +9,10 @@ const RITARDO_MP = 8;
 const PERC_TOTALI = 4;
 
 @Component({
-  selector: 'tabella-dati-manutenzione',
-  templateUrl: './tabella-dati-manutenzione.component.html',
-  styleUrls: ['./tabella-dati-manutenzione.component.scss']
+    selector: 'tabella-dati-manutenzione',
+    templateUrl: './tabella-dati-manutenzione.component.html',
+    styleUrls: ['./tabella-dati-manutenzione.component.scss'],
+    standalone: false
 })
 export class TabellaDatiManutenzioneComponent extends AbstractDataWithMonthsComponent {
   override tableName = 'tabella-manutenzione';

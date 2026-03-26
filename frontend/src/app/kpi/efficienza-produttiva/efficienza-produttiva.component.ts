@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'efficienza-produttiva',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './efficienza-produttiva.component.html',
-  styleUrls: ['./efficienza-produttiva.component.scss']
+    selector: 'efficienza-produttiva',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './efficienza-produttiva.component.html',
+    styleUrls: ['./efficienza-produttiva.component.scss']
 })
 export class EfficienzaProduttivaComponent extends AbstractKPIComponent {
   override name = 'efficienza-produttiva';

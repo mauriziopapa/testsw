@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'attivo',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './attivo.component.html',
-  styleUrls: ['./attivo.component.scss']
+    selector: 'attivo',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './attivo.component.html',
+    styleUrls: ['./attivo.component.scss']
 })
 export class AttivoComponent extends AbstractKPIComponent {
   override name = 'attivo';

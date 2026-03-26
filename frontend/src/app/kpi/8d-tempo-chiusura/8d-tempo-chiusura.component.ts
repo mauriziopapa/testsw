@@ -7,11 +7,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'd8-tempo-chiusura',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './8d-tempo-chiusura.component.html',
-  styleUrls: ['./8d-tempo-chiusura.component.scss']
+    selector: 'd8-tempo-chiusura',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './8d-tempo-chiusura.component.html',
+    styleUrls: ['./8d-tempo-chiusura.component.scss']
 })
 export class D8TempoChiusuraComponent extends AbstractKPIComponent {
   override name = '8d-tempo-chiusura';

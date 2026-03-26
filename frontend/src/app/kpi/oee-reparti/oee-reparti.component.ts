@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'oee-reparti',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './oee-reparti.component.html',
-  styleUrls: ['./oee-reparti.component.scss']
+    selector: 'oee-reparti',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './oee-reparti.component.html',
+    styleUrls: ['./oee-reparti.component.scss']
 })
 export class OEERepartiComponent extends AbstractKPIComponent {
   override name = 'oee-reparti';

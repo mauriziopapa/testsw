@@ -10,11 +10,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { ChartGroupData } from 'src/app/models/chart-group-data';
 
 @Component({
-  selector: 'rifiuti-prodotti',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './rifiuti-prodotti.component.html',
-  styleUrls: ['./rifiuti-prodotti.component.scss']
+    selector: 'rifiuti-prodotti',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './rifiuti-prodotti.component.html',
+    styleUrls: ['./rifiuti-prodotti.component.scss']
 })
 export class RifiutiProdottiComponent extends AbstractKPIComponent {
   override name = 'rifiuti-prodotti';

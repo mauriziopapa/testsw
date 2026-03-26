@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'perc-ferie-residue',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './perc-ferie-residue.component.html',
-  styleUrls: ['./perc-ferie-residue.component.scss']
+    selector: 'perc-ferie-residue',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './perc-ferie-residue.component.html',
+    styleUrls: ['./perc-ferie-residue.component.scss']
 })
 export class PercFerieResidueComponent extends AbstractKPIComponent {
   override name = 'perc-ferie-residue';

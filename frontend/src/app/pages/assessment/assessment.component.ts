@@ -19,9 +19,10 @@ import { KpiInfo } from 'src/app/models/kpi-info';
 import { DashboardWidgets } from 'src/app/models/dashboard-widget';
 
 @Component({
-  selector: 'assessment',
-  templateUrl: './assessment.component.html',
-  styleUrls: ['./assessment.component.scss']
+    selector: 'assessment',
+    templateUrl: './assessment.component.html',
+    styleUrls: ['./assessment.component.scss'],
+    standalone: false
 })
 export class AssessmentComponent implements AfterViewInit {
   cols = 1;

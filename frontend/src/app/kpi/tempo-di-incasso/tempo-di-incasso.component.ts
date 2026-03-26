@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'tempo-di-incasso',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './tempo-di-incasso.component.html',
-  styleUrls: ['./tempo-di-incasso.component.scss']
+    selector: 'tempo-di-incasso',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './tempo-di-incasso.component.html',
+    styleUrls: ['./tempo-di-incasso.component.scss']
 })
 export class TempoDiIncassoComponent extends AbstractKPIComponent {
   override name = 'tempo-di-incasso';

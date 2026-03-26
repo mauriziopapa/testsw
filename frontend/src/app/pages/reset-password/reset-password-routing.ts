@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from 'src/app/helpers/auth.guard';
+import { authGuard } from 'src/app/helpers/auth.guard';
 import { ResetPasswordComponent } from './reset-password.component';
 
-const routes: Routes = [{ path: '', component: ResetPasswordComponent, canActivate: [AuthGuard] }];
+const routes: Routes = [{ path: '', component: ResetPasswordComponent, canActivate: [authGuard] }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

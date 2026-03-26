@@ -27,9 +27,10 @@ import { KpiDialogComponent } from 'src/app/shared/kpi-dialog/kpi-dialog.compone
 import { SuccessSnackbarComponent } from 'src/app/shared/success-snackbar/success-snackbar.component';
 
 @Component({
-  selector: 'base-dashboard',
-  template: ` <p></p> `,
-  styles: []
+    selector: 'base-dashboard',
+    template: ` <p></p> `,
+    styles: [],
+    standalone: false
 })
 export abstract class AbstractDashboardComponent implements OnInit, AfterViewInit, OnDestroy {
   kpis = new Array<Widget>();

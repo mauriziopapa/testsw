@@ -12,10 +12,11 @@ import * as _moment from 'moment';
 import { default as _rollupMoment } from 'moment';
 
 @Component({
-  selector: 'table-filters',
-  templateUrl: './table-filters.component.html',
-  styleUrls: ['./table-filters.component.scss'],
-  providers: []
+    selector: 'table-filters',
+    templateUrl: './table-filters.component.html',
+    styleUrls: ['./table-filters.component.scss'],
+    providers: [],
+    standalone: false
 })
 export class TableFiltersComponent implements OnInit {
   //accordion

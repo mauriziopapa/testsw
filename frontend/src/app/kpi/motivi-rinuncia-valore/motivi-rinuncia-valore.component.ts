@@ -6,11 +6,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'motivi-rinuncia-valore',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './motivi-rinuncia-valore.component.html',
-  styleUrls: ['./motivi-rinuncia-valore.component.scss']
+    selector: 'motivi-rinuncia-valore',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './motivi-rinuncia-valore.component.html',
+    styleUrls: ['./motivi-rinuncia-valore.component.scss']
 })
 export class MotiviRinunciaValoreComponent extends AbstractKPIComponent {
   override name = 'motivi-rinuncia-valore';

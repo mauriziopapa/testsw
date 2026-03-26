@@ -3,9 +3,10 @@ import { Chart, ChartConfiguration, ChartItem, registerables } from 'node_module
 import { AbstractChartComponent } from '../chart/chart.component';
 
 @Component({
-  selector: 'bar-chart',
-  templateUrl: './bar-chart.component.html',
-  styleUrls: ['./bar-chart.component.scss']
+    selector: 'bar-chart',
+    templateUrl: './bar-chart.component.html',
+    styleUrls: ['./bar-chart.component.scss'],
+    standalone: false
 })
 export class BarChartComponent extends AbstractChartComponent implements AfterViewInit, OnDestroy {
   myBarChart: Chart | undefined;

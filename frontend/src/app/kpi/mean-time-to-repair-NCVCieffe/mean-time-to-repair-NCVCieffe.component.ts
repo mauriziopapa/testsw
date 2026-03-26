@@ -9,11 +9,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { KpiOptions } from 'src/app/models/kpi-options';
 
 @Component({
-  selector: 'mean-time-to-repair-NCVCieffe',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './mean-time-to-repair-NCVCieffe.component.html',
-  styleUrls: ['./mean-time-to-repair-NCVCieffe.component.scss']
+    selector: 'mean-time-to-repair-NCVCieffe',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './mean-time-to-repair-NCVCieffe.component.html',
+    styleUrls: ['./mean-time-to-repair-NCVCieffe.component.scss']
 })
 export class MeanTimeToRepairNCVCieffeComponent extends AbstractKPIComponent {
   override name = 'mean-time-to-repair-NCVCieffe';

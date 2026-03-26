@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'fatturato-clienti',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './fatturato-clienti.component.html',
-  styleUrls: ['./fatturato-clienti.component.scss']
+    selector: 'fatturato-clienti',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './fatturato-clienti.component.html',
+    styleUrls: ['./fatturato-clienti.component.scss']
 })
 export class FatturatoClientiComponent extends AbstractKPIComponent {
   override name = 'fatturato-clienti';

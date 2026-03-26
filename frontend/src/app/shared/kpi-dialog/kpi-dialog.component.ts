@@ -9,9 +9,10 @@ import { Filters } from 'src/app/models/filters';
 import { KpiService } from 'src/app/services/kpi.service';
 
 @Component({
-  selector: 'kpi-dialog',
-  templateUrl: './kpi-dialog.component.html',
-  styleUrls: ['./kpi-dialog.component.scss']
+    selector: 'kpi-dialog',
+    templateUrl: './kpi-dialog.component.html',
+    styleUrls: ['./kpi-dialog.component.scss'],
+    standalone: false
 })
 export class KpiDialogComponent {
   title = 'Info';

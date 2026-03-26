@@ -3,9 +3,10 @@ import { Chart, ChartConfiguration, ChartItem, registerables } from 'node_module
 import { AbstractChartComponent } from '../chart/chart.component';
 
 @Component({
-  selector: 'line-chart',
-  templateUrl: './line-chart.component.html',
-  styleUrls: ['./line-chart.component.scss']
+    selector: 'line-chart',
+    templateUrl: './line-chart.component.html',
+    styleUrls: ['./line-chart.component.scss'],
+    standalone: false
 })
 export class LineChartComponent extends AbstractChartComponent implements AfterViewInit, OnDestroy {
   myLineChart: Chart | undefined;
