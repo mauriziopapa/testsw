@@ -7,9 +7,10 @@ import { FailSnackbarComponent } from 'src/app/shared/fail-snackbar/fail-snackba
 
 // qui avevo pochissimo tempo
 @Component({
-  selector: 'tabella-dati-impianti-ind',
-  templateUrl: './tabella-dati-impianti-ind.component.html',
-  styleUrls: ['./tabella-dati-impianti-ind.component.scss']
+    selector: 'tabella-dati-impianti-ind',
+    templateUrl: './tabella-dati-impianti-ind.component.html',
+    styleUrls: ['./tabella-dati-impianti-ind.component.scss'],
+    standalone: false
 })
 export class TabellaDatiImpiantiIndComponent {
   tableName = 'tabella-impianti-ind';

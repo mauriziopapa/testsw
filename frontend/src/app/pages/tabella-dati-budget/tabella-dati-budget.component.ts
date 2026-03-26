@@ -8,9 +8,10 @@ import { FailSnackbarComponent } from 'src/app/shared/fail-snackbar/fail-snackba
 import { SuccessSnackbarComponent } from 'src/app/shared/success-snackbar/success-snackbar.component';
 
 @Component({
-  selector: 'tabella-dati-budget',
-  templateUrl: './tabella-dati-budget.component.html',
-  styleUrls: ['./tabella-dati-budget.component.scss']
+    selector: 'tabella-dati-budget',
+    templateUrl: './tabella-dati-budget.component.html',
+    styleUrls: ['./tabella-dati-budget.component.scss'],
+    standalone: false
 })
 export class TabellaDatiBudgetComponent {
   tableName = 'tabella-dati-budget';

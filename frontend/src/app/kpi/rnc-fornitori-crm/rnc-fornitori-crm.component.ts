@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'rnc-fornitori-crm',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './rnc-fornitori-crm.component.html',
-  styleUrls: ['./rnc-fornitori-crm.component.scss']
+    selector: 'rnc-fornitori-crm',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './rnc-fornitori-crm.component.html',
+    styleUrls: ['./rnc-fornitori-crm.component.scss']
 })
 export class RNCFornitoriCRMComponent extends AbstractKPIComponent {
   override name = 'rnc-fornitori-crm';

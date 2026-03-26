@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'perc-lead-time',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './perc-lead-time.component.html',
-  styleUrls: ['./perc-lead-time.component.scss']
+    selector: 'perc-lead-time',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './perc-lead-time.component.html',
+    styleUrls: ['./perc-lead-time.component.scss']
 })
 export class PercLeadTimeComponent extends AbstractKPIComponent {
   override name = 'perc-lead-time';

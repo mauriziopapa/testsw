@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { MateriaPrimaLavorazione } from 'src/app/models/materiaprima-lavorazione';
 import { MateriePrimeService } from 'src/app/services/materie-prime.service';
 
 @Component({
-  selector: 'tabella-materieprime-lavorazioni',
-  templateUrl: './tabella-materieprime-lavorazioni.component.html',
-  styleUrls: ['./tabella-materieprime-lavorazioni.component.scss']
+    selector: 'tabella-materieprime-lavorazioni',
+    templateUrl: './tabella-materieprime-lavorazioni.component.html',
+    styleUrls: ['./tabella-materieprime-lavorazioni.component.scss'],
+    standalone: false
 })
 export class TabellaMPLavorazioniComponent {
   dataSource: MatTableDataSource<MateriaPrimaLavorazione>;

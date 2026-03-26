@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { AbstractDashboardComponent } from '../abstract-dashboard/abstract-dashboard.component';
 
 @Component({
-  selector: 'acquisti',
-  templateUrl: './acquisti.component.html',
-  styleUrls: ['./acquisti.component.scss']
+    selector: 'acquisti',
+    templateUrl: './acquisti.component.html',
+    styleUrls: ['./acquisti.component.scss'],
+    standalone: false
 })
 export class AcquistiComponent extends AbstractDashboardComponent {
   /* override setKpiRowHeight() {

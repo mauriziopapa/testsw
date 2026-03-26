@@ -25,9 +25,10 @@ const PERC_EBTDA = 18;
 const PERC_ROI = 19;
 
 @Component({
-  selector: 'tabella-dati-concorrenti',
-  templateUrl: './tabella-dati-concorrenti.component.html',
-  styleUrls: ['./tabella-dati-concorrenti.component.scss']
+    selector: 'tabella-dati-concorrenti',
+    templateUrl: './tabella-dati-concorrenti.component.html',
+    styleUrls: ['./tabella-dati-concorrenti.component.scss'],
+    standalone: false
 })
 export class TabellaDatiConcorrentiComponent extends AbstractDataWithMonthsComponent {
   override tableName = 'tabella-concorrenti';

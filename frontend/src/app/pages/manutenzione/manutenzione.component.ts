@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { AbstractDashboardComponent } from '../abstract-dashboard/abstract-dashboard.component';
 
 @Component({
-  selector: 'manutenzione',
-  templateUrl: './manutenzione.component.html',
-  styleUrls: ['./manutenzione.component.scss']
+    selector: 'manutenzione',
+    templateUrl: './manutenzione.component.html',
+    styleUrls: ['./manutenzione.component.scss'],
+    standalone: false
 })
 export class ManutenzioneComponent extends AbstractDashboardComponent {
   /* override setKpiRowHeight() {

@@ -4,9 +4,10 @@ import { CartellinoService } from 'src/app/services/cartellino.service';
 import { AbstractDataWithMonthsComponent } from '../abstract-table-data-with-months/abstract-table-data-with-months.component';
 
 @Component({
-  selector: 'tabella-dati-cartellino',
-  templateUrl: './tabella-dati-cartellino.component.html',
-  styleUrls: ['./tabella-dati-cartellino.component.scss']
+    selector: 'tabella-dati-cartellino',
+    templateUrl: './tabella-dati-cartellino.component.html',
+    styleUrls: ['./tabella-dati-cartellino.component.scss'],
+    standalone: false
 })
 export class TabellaDatiCartellinoComponent extends AbstractDataWithMonthsComponent {
   override tableName = 'tabella-cartellino';

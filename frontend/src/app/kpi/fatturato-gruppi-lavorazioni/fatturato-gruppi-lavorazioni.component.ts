@@ -7,11 +7,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'fatturato-gruppi-lavorazioni',
-  standalone: true,
-  imports: [PieChartModule, SharedModule],
-  templateUrl: './fatturato-gruppi-lavorazioni.component.html',
-  styleUrls: ['./fatturato-gruppi-lavorazioni.component.scss']
+    selector: 'fatturato-gruppi-lavorazioni',
+    imports: [PieChartModule, SharedModule],
+    templateUrl: './fatturato-gruppi-lavorazioni.component.html',
+    styleUrls: ['./fatturato-gruppi-lavorazioni.component.scss']
 })
 export class FatturatoGruppiLavorazioniComponent extends AbstractKPIComponent {
   override name = 'fatturato-gruppi-lavorazioni';

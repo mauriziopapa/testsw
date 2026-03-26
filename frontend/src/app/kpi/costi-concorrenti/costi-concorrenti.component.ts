@@ -6,11 +6,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'costi-concorrenti',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './costi-concorrenti.component.html',
-  styleUrls: ['./costi-concorrenti.component.scss']
+    selector: 'costi-concorrenti',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './costi-concorrenti.component.html',
+    styleUrls: ['./costi-concorrenti.component.scss']
 })
 export class CostiConcorrentiComponent extends AbstractKPIComponent {
   override name = 'costi-concorrenti';

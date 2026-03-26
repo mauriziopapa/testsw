@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'saturazione-induzione',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './saturazione-induzione.component.html',
-  styleUrls: ['./saturazione-induzione.component.scss']
+    selector: 'saturazione-induzione',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './saturazione-induzione.component.html',
+    styleUrls: ['./saturazione-induzione.component.scss']
 })
 export class SaturazioneInduzioneComponent extends AbstractKPIComponent {
   override name = 'saturazione-induzione';

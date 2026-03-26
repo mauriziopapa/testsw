@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { ClienteFatturato } from 'src/app/models/cliente-fatturato';
 import { ClientiService } from 'src/app/services/clienti.service';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { CurrencyPipe } from '@angular/common';
 
 @Component({
-  selector: 'tabella-fatturato-clienti',
-  templateUrl: './tabella-fatturato-clienti.component.html',
-  styleUrls: ['./tabella-fatturato-clienti.component.scss']
+    selector: 'tabella-fatturato-clienti',
+    templateUrl: './tabella-fatturato-clienti.component.html',
+    styleUrls: ['./tabella-fatturato-clienti.component.scss'],
+    standalone: false
 })
 export class TabellaFatturatoClientiComponent {
   dataSource: MatTableDataSource<ClienteFatturato>;

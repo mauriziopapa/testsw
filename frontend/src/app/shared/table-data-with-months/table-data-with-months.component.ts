@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'table-data-with-months',
-  templateUrl: './table-data-with-months.component.html',
-  styleUrls: ['./table-data-with-months.component.scss']
+    selector: 'table-data-with-months',
+    templateUrl: './table-data-with-months.component.html',
+    styleUrls: ['./table-data-with-months.component.scss'],
+    standalone: false
 })
 export class TableDataWithMonthsComponent {
   @Input() anni = new Array<string>();

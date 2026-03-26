@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'perc-straordinario',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './perc-straordinario.component.html',
-  styleUrls: ['./perc-straordinario.component.scss']
+    selector: 'perc-straordinario',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './perc-straordinario.component.html',
+    styleUrls: ['./perc-straordinario.component.scss']
 })
 export class PercStraordinarioComponent extends AbstractKPIComponent {
   override name = 'perc-straordinario';

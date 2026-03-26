@@ -10,9 +10,10 @@ import { FailSnackbarComponent } from 'src/app/shared/fail-snackbar/fail-snackba
 import { SuccessSnackbarComponent } from 'src/app/shared/success-snackbar/success-snackbar.component';
 
 @Component({
-  selector: 'tabella-dati-map-mp-ts',
-  templateUrl: './tabella-dati-map-mp-ts.component.html',
-  styleUrls: ['./tabella-dati-map-mp-ts.component.scss']
+    selector: 'tabella-dati-map-mp-ts',
+    templateUrl: './tabella-dati-map-mp-ts.component.html',
+    styleUrls: ['./tabella-dati-map-mp-ts.component.scss'],
+    standalone: false
 })
 export class TabellaDatiMapMpTSComponent {
   tableName = 'tabella-dati-map-mp-ts';

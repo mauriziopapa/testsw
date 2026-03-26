@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'motivazione-dipendenti',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './motivazione-dipendenti.component.html',
-  styleUrls: ['./motivazione-dipendenti.component.scss']
+    selector: 'motivazione-dipendenti',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './motivazione-dipendenti.component.html',
+    styleUrls: ['./motivazione-dipendenti.component.scss']
 })
 export class MotivazioneDipendentiComponent extends AbstractKPIComponent {
   override name = 'motivazione-dipendenti';

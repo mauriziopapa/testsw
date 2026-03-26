@@ -9,11 +9,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { ChartTarget } from 'src/app/models/chart-target';
 
 @Component({
-  selector: 'rnc-fornitori-ts',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './rnc-fornitori-ts.component.html',
-  styleUrls: ['./rnc-fornitori-ts.component.scss']
+    selector: 'rnc-fornitori-ts',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './rnc-fornitori-ts.component.html',
+    styleUrls: ['./rnc-fornitori-ts.component.scss']
 })
 export class RNCFornitoriTSComponent extends AbstractKPIComponent {
   override name = 'rnc-fornitori-ts';

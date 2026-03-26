@@ -9,11 +9,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { ChartTarget } from 'src/app/models/chart-target';
 
 @Component({
-  selector: 'puntualita-materieprime-ts',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './puntualita-materieprime-ts.component.html',
-  styleUrls: ['./puntualita-materieprime-ts.component.scss']
+    selector: 'puntualita-materieprime-ts',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './puntualita-materieprime-ts.component.html',
+    styleUrls: ['./puntualita-materieprime-ts.component.scss']
 })
 export class PuntualitaMateriePrimeTSComponent extends AbstractKPIComponent {
   override name = 'puntualita-materieprime-ts';

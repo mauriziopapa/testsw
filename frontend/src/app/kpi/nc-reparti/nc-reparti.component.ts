@@ -7,11 +7,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { ChartTarget } from 'src/app/models/chart-target';
 
 @Component({
-  selector: 'nc-reparti',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './nc-reparti.component.html',
-  styleUrls: ['./nc-reparti.component.scss']
+    selector: 'nc-reparti',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './nc-reparti.component.html',
+    styleUrls: ['./nc-reparti.component.scss']
 })
 export class NCRepartiComponent extends AbstractKPIComponent {
   override name = 'nc-reparti';

@@ -9,9 +9,10 @@ import { FailSnackbarComponent } from 'src/app/shared/fail-snackbar/fail-snackba
 import { SuccessSnackbarComponent } from 'src/app/shared/success-snackbar/success-snackbar.component';
 
 @Component({
-  selector: 'tabella-dati-misurazione-metano',
-  templateUrl: './tabella-dati-misurazione-metano.component.html',
-  styleUrls: ['./tabella-dati-misurazione-metano.component.scss']
+    selector: 'tabella-dati-misurazione-metano',
+    templateUrl: './tabella-dati-misurazione-metano.component.html',
+    styleUrls: ['./tabella-dati-misurazione-metano.component.scss'],
+    standalone: false
 })
 export class TabellaDatiMisurazioneMetanoComponent {
   tableName = 'tabella-dati-misurazione-metano';

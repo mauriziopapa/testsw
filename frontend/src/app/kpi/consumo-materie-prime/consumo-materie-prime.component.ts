@@ -10,11 +10,10 @@ import { KpiData } from 'src/app/models/kpi-data';
 import { ChartGroupData } from 'src/app/models/chart-group-data';
 
 @Component({
-  selector: 'consumo-materie-prime',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './consumo-materie-prime.component.html',
-  styleUrls: ['./consumo-materie-prime.component.scss']
+    selector: 'consumo-materie-prime',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './consumo-materie-prime.component.html',
+    styleUrls: ['./consumo-materie-prime.component.scss']
 })
 export class ConsumoMateriePrimeComponent extends AbstractKPIComponent {
   override name = 'consumo-materie-prime';

@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { CostoFornitore } from 'src/app/models/costo-fornitore';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { CurrencyPipe } from '@angular/common';
 import { FornitoriService } from 'src/app/services/fornitori.service';
 
 @Component({
-  selector: 'tabella-costo-fornitori',
-  templateUrl: './tabella-costo-fornitori.component.html',
-  styleUrls: ['./tabella-costo-fornitori.component.scss']
+    selector: 'tabella-costo-fornitori',
+    templateUrl: './tabella-costo-fornitori.component.html',
+    styleUrls: ['./tabella-costo-fornitori.component.scss'],
+    standalone: false
 })
 export class TabellaCostoFornitoriComponent {
   dataSource: MatTableDataSource<CostoFornitore>;

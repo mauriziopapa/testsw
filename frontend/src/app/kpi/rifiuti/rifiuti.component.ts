@@ -7,11 +7,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'rifiuti',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './rifiuti.component.html',
-  styleUrls: ['./rifiuti.component.scss']
+    selector: 'rifiuti',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './rifiuti.component.html',
+    styleUrls: ['./rifiuti.component.scss']
 })
 export class RifiutiComponent extends AbstractKPIComponent {
   override name = 'rifiuti';

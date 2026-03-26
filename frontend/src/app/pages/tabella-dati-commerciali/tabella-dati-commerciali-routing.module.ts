@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppGuard } from 'src/app/helpers/app.guard';
+import { appGuard } from 'src/app/helpers/app.guard';
 import { TabellaDatiCommercialiComponent } from './tabella-dati-commerciali.component';
 
 const routes: Routes = [
-  { path: '', component: TabellaDatiCommercialiComponent, canActivate: [AppGuard] }
+  { path: '', component: TabellaDatiCommercialiComponent, canActivate: [appGuard] }
 ];
 
 @NgModule({

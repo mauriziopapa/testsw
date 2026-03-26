@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppGuard } from 'src/app/helpers/app.guard';
+import { appGuard } from 'src/app/helpers/app.guard';
 import { TabellaAumentoMpFornitoriComponent } from './tabella-aumento-mp-fornitori.component';
 
 const routes: Routes = [
-  { path: '', component: TabellaAumentoMpFornitoriComponent, canActivate: [AppGuard] }
+  { path: '', component: TabellaAumentoMpFornitoriComponent, canActivate: [appGuard] }
 ];
 
 @NgModule({

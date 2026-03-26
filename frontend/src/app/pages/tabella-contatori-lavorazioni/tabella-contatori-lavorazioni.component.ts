@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { ContatoreLavorazione } from 'src/app/models/contatore-lavorazione';
 import { ContatoriService } from 'src/app/services/contatori.service';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'tabella-contatori-lavorazioni',
-  templateUrl: './tabella-contatori-lavorazioni.component.html',
-  styleUrls: ['./tabella-contatori-lavorazioni.component.scss']
+    selector: 'tabella-contatori-lavorazioni',
+    templateUrl: './tabella-contatori-lavorazioni.component.html',
+    styleUrls: ['./tabella-contatori-lavorazioni.component.scss'],
+    standalone: false
 })
 export class TabellaContatoriLavorazioniComponent {
   dataSource: MatTableDataSource<ContatoreLavorazione>;

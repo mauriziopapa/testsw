@@ -10,11 +10,10 @@ import { KpiData } from 'src/app/models/kpi-data';
 import { ChartData } from 'src/app/models/chart-data';
 
 @Component({
-  selector: 'internal-nc',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './internal-nc.component.html',
-  styleUrls: ['./internal-nc.component.scss']
+    selector: 'internal-nc',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './internal-nc.component.html',
+    styleUrls: ['./internal-nc.component.scss']
 })
 export class InternalNCComponent extends AbstractKPIComponent {
   override name = 'internal-nc';

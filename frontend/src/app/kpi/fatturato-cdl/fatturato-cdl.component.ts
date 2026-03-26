@@ -7,11 +7,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'fatturato-cdl',
-  standalone: true,
-  imports: [PieChartModule, SharedModule],
-  templateUrl: './fatturato-cdl.component.html',
-  styleUrls: ['./fatturato-cdl.component.scss']
+    selector: 'fatturato-cdl',
+    imports: [PieChartModule, SharedModule],
+    templateUrl: './fatturato-cdl.component.html',
+    styleUrls: ['./fatturato-cdl.component.scss']
 })
 export class FatturatoCdlComponent extends AbstractKPIComponent {
   override name = 'fatturato-cdl';

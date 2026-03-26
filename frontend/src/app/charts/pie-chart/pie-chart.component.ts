@@ -3,9 +3,10 @@ import { Chart, ChartConfiguration, ChartItem, registerables } from 'node_module
 import { AbstractChartComponent } from '../chart/chart.component';
 
 @Component({
-  selector: 'pie-chart',
-  templateUrl: './pie-chart.component.html',
-  styleUrls: ['./pie-chart.component.scss']
+    selector: 'pie-chart',
+    templateUrl: './pie-chart.component.html',
+    styleUrls: ['./pie-chart.component.scss'],
+    standalone: false
 })
 export class PieChartComponent extends AbstractChartComponent implements AfterViewInit, OnDestroy {
   myPieChart: Chart | undefined;

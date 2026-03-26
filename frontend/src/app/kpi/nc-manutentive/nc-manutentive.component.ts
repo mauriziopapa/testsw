@@ -9,11 +9,10 @@ import { KpiOptions } from 'src/app/models/kpi-options';
 import { KpiData } from 'src/app/models/kpi-data';
 
 @Component({
-  selector: 'nc-manutentive',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './nc-manutentive.component.html',
-  styleUrls: ['./nc-manutentive.component.scss']
+    selector: 'nc-manutentive',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './nc-manutentive.component.html',
+    styleUrls: ['./nc-manutentive.component.scss']
 })
 export class NcManutentiveComponent extends AbstractKPIComponent {
   override name = 'nc-manutentive';

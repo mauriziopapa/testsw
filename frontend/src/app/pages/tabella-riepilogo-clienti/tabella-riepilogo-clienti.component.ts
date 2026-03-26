@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RiepilogoCliente } from 'src/app/models/riepilogo-cliente';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { CurrencyPipe } from '@angular/common';
 import { RiepilogoClientiService } from 'src/app/services/riepilogo-clienti.service';
 
 @Component({
-  selector: 'tabella-riepilogo-clienti',
-  templateUrl: './tabella-riepilogo-clienti.component.html',
-  styleUrls: ['./tabella-riepilogo-clienti.component.scss']
+    selector: 'tabella-riepilogo-clienti',
+    templateUrl: './tabella-riepilogo-clienti.component.html',
+    styleUrls: ['./tabella-riepilogo-clienti.component.scss'],
+    standalone: false
 })
 export class TabellaRiepilogoClientiComponent {
   dataSource: MatTableDataSource<RiepilogoCliente>;

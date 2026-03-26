@@ -6,11 +6,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'fatturato-gruppi-lavorazioni-confronto',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './fatturato-gruppi-lavorazioni-confronto.component.html',
-  styleUrls: ['./fatturato-gruppi-lavorazioni-confronto.component.scss']
+    selector: 'fatturato-gruppi-lavorazioni-confronto',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './fatturato-gruppi-lavorazioni-confronto.component.html',
+    styleUrls: ['./fatturato-gruppi-lavorazioni-confronto.component.scss']
 })
 export class FatturatoGruppiLavorazioniConfrontoComponent extends AbstractKPIComponent {
   override name = 'fatturato-gruppi-lavorazioni-confronto';

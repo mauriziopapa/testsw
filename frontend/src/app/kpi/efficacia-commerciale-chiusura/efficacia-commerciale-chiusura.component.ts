@@ -10,11 +10,10 @@ import { KpiOptions } from 'src/app/models/kpi-options';
 import { ChartTarget } from 'src/app/models/chart-target';
 
 @Component({
-  selector: 'efficacia-commerciale-chiusura',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './efficacia-commerciale-chiusura.component.html',
-  styleUrls: ['./efficacia-commerciale-chiusura.component.scss']
+    selector: 'efficacia-commerciale-chiusura',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './efficacia-commerciale-chiusura.component.html',
+    styleUrls: ['./efficacia-commerciale-chiusura.component.scss']
 })
 export class EfficaciaCommercialeChiusuraComponent extends AbstractKPIComponent {
   override name = 'efficacia-commerciale-chiusura';

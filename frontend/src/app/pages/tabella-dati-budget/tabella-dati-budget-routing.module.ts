@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppGuard } from 'src/app/helpers/app.guard';
+import { appGuard } from 'src/app/helpers/app.guard';
 import { TabellaDatiBudgetComponent } from './tabella-dati-budget.component';
 
 const routes: Routes = [
-  { path: '', component: TabellaDatiBudgetComponent, canActivate: [AppGuard] }
+  { path: '', component: TabellaDatiBudgetComponent, canActivate: [appGuard] }
 ];
 
 @NgModule({

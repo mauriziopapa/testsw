@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'emissioni',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './emissioni.component.html',
-  styleUrls: ['./emissioni.component.scss']
+    selector: 'emissioni',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './emissioni.component.html',
+    styleUrls: ['./emissioni.component.scss']
 })
 export class EmissioniComponent extends AbstractKPIComponent {
   override name = 'emissioni';

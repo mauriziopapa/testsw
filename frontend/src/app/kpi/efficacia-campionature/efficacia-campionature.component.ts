@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'efficacia-campionature',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './efficacia-campionature.component.html',
-  styleUrls: ['./efficacia-campionature.component.scss']
+    selector: 'efficacia-campionature',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './efficacia-campionature.component.html',
+    styleUrls: ['./efficacia-campionature.component.scss']
 })
 export class EfficaciaCampionatureComponent extends AbstractKPIComponent {
   override name = 'efficacia-camp';

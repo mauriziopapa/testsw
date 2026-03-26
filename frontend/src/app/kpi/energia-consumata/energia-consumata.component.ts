@@ -7,11 +7,10 @@ import { StackedBarChartModule } from 'src/app/charts/stacked-bar-chart/stacked-
 import { ChartGroupData } from 'src/app/models/chart-group-data';
 
 @Component({
-  selector: 'energia-consumata',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './energia-consumata.component.html',
-  styleUrls: ['./energia-consumata.component.scss']
+    selector: 'energia-consumata',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './energia-consumata.component.html',
+    styleUrls: ['./energia-consumata.component.scss']
 })
 export class EnergiaConsumataComponent extends AbstractKPIComponent {
   override name = 'energia-consumata';

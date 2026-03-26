@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'kpi-external',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './kpi-external.component.html',
-  styleUrls: ['./kpi-external.component.scss']
+    selector: 'kpi-external',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './kpi-external.component.html',
+    styleUrls: ['./kpi-external.component.scss']
 })
 export class KPIExternalComponent extends AbstractKPIComponent {
   override name = 'kpi-external';

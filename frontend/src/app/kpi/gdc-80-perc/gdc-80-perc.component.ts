@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'gdc-80-perc',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './gdc-80-perc.component.html',
-  styleUrls: ['./gdc-80-perc.component.scss']
+    selector: 'gdc-80-perc',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './gdc-80-perc.component.html',
+    styleUrls: ['./gdc-80-perc.component.scss']
 })
 export class GDC80PercComponent extends AbstractKPIComponent {
   override name = 'gdc-80-perc';

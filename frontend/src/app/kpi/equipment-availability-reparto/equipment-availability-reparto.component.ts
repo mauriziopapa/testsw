@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'equipment-availability-reparto',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './equipment-availability-reparto.component.html',
-  styleUrls: ['./equipment-availability-reparto.component.scss']
+    selector: 'equipment-availability-reparto',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './equipment-availability-reparto.component.html',
+    styleUrls: ['./equipment-availability-reparto.component.scss']
 })
 export class EquipmentAvailabilityRepartoComponent extends AbstractKPIComponent {
   override name = 'equipment-availability-reparto';

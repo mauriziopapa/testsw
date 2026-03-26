@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { AbstractDashboardComponent } from '../abstract-dashboard/abstract-dashboard.component';
 
 @Component({
-  selector: 'industrializzazione',
-  templateUrl: './industrializzazione.component.html',
-  styleUrls: ['./industrializzazione.component.scss']
+    selector: 'industrializzazione',
+    templateUrl: './industrializzazione.component.html',
+    styleUrls: ['./industrializzazione.component.scss'],
+    standalone: false
 })
 export class IndustrializzazioneComponent extends AbstractDashboardComponent {
   /* override setKpiRowHeight() {

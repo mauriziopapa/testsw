@@ -9,9 +9,10 @@ import { FailSnackbarComponent } from 'src/app/shared/fail-snackbar/fail-snackba
 import { SuccessSnackbarComponent } from 'src/app/shared/success-snackbar/success-snackbar.component';
 
 @Component({
-  selector: 'tabella-dati-contatori-misurazioni',
-  templateUrl: './tabella-dati-contatori-misurazioni.component.html',
-  styleUrls: ['./tabella-dati-contatori-misurazioni.component.scss']
+    selector: 'tabella-dati-contatori-misurazioni',
+    templateUrl: './tabella-dati-contatori-misurazioni.component.html',
+    styleUrls: ['./tabella-dati-contatori-misurazioni.component.scss'],
+    standalone: false
 })
 export class TabellaDatiContatoriMisurazioniComponent {
   tableName = 'tabella-dati-contatori-misurazioni';

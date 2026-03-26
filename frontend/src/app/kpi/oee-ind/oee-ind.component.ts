@@ -9,11 +9,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { KpiOptions } from 'src/app/models/kpi-options';
 
 @Component({
-  selector: 'oee-ind',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './oee-ind.component.html',
-  styleUrls: ['./oee-ind.component.scss']
+    selector: 'oee-ind',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './oee-ind.component.html',
+    styleUrls: ['./oee-ind.component.scss']
 })
 export class OEEIndComponent extends AbstractKPIComponent {
   override name = 'oee-ind';

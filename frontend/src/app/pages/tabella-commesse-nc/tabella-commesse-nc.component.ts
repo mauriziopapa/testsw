@@ -1,13 +1,14 @@
 import moment from 'moment';
 import { Component } from '@angular/core';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { CommesseNc } from 'src/app/models/commesse-nc';
 import { CommesseNcService } from 'src/app/services/commesse-nc.service';
 
 @Component({
-  selector: 'tabella-commesse-nc',
-  templateUrl: './tabella-commesse-nc.component.html',
-  styleUrls: ['./tabella-commesse-nc.component.scss']
+    selector: 'tabella-commesse-nc',
+    templateUrl: './tabella-commesse-nc.component.html',
+    styleUrls: ['./tabella-commesse-nc.component.scss'],
+    standalone: false
 })
 export class TabellaCommesseNcComponent {
   dataSource: MatTableDataSource<CommesseNc>;

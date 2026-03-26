@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'costi-non-qualita',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './costi-non-qualita.component.html',
-  styleUrls: ['./costi-non-qualita.component.scss']
+    selector: 'costi-non-qualita',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './costi-non-qualita.component.html',
+    styleUrls: ['./costi-non-qualita.component.scss']
 })
 export class CostiNonQualitaComponent extends AbstractKPIComponent {
   override name = 'costi-non-qualita';

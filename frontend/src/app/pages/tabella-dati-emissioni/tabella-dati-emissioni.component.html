@@ -10,7 +10,7 @@
     <ng-container matColumnDef="Data">
       <mat-header-cell *matHeaderCellDef> Data </mat-header-cell>
       <mat-cell *matCellDef="let element;" [formGroup]="element">
-        <mat-form-field floatLabel="never">
+        <mat-form-field floatLabel="auto">
           <input
             class="center-text"
             type="date"
@@ -26,7 +26,7 @@
     <ng-container matColumnDef="punto_di_emissione">
       <mat-header-cell *matHeaderCellDef> Punto di Emissione </mat-header-cell>
       <mat-cell *matCellDef="let element; let index = index" [formGroup]="element">
-        <mat-form-field floatLabel="never">
+        <mat-form-field floatLabel="auto">
           <input
             class="center-text"
             matInput
@@ -51,7 +51,7 @@
     <ng-container matColumnDef="rapporto">
       <mat-header-cell *matHeaderCellDef> Rapporto </mat-header-cell>
       <mat-cell *matCellDef="let element;" [formGroup]="element">
-        <mat-form-field floatLabel="never">
+        <mat-form-field floatLabel="auto">
           <input class="center-text" matInput placeholder="Rapporto" formControlName="rapporto" />
         </mat-form-field>
       </mat-cell>
@@ -61,7 +61,7 @@
     <ng-container matColumnDef="inquinante">
       <mat-header-cell *matHeaderCellDef> Inquinante </mat-header-cell>
       <mat-cell *matCellDef="let element; let index = index" [formGroup]="element">
-        <mat-form-field floatLabel="never">
+        <mat-form-field floatLabel="auto">
           <input
             class="center-text"
             matInput
@@ -87,7 +87,7 @@
     <ng-container matColumnDef="c_rilevata">
       <mat-header-cell *matHeaderCellDef> C Rilevata (mg/Nm3) </mat-header-cell>
       <mat-cell *matCellDef="let element;" [formGroup]="element">
-        <mat-form-field floatLabel="never">
+        <mat-form-field floatLabel="auto">
           <input
             class="center-text"
             type="number"
@@ -103,7 +103,7 @@
     <ng-container matColumnDef="limiti_di_legge">
       <mat-header-cell *matHeaderCellDef> Limiti di Legge (mg/Nm3) </mat-header-cell>
       <mat-cell *matCellDef="let element;" [formGroup]="element">
-        <mat-form-field floatLabel="never">
+        <mat-form-field floatLabel="auto">
           <input
             class="center-text"
             matInput
@@ -119,7 +119,7 @@
     <ng-container matColumnDef="limite_al_100">
       <mat-header-cell *matHeaderCellDef> Limite al 100% </mat-header-cell>
       <mat-cell *matCellDef="let element;" [formGroup]="element">
-        <mat-form-field floatLabel="never">
+        <mat-form-field floatLabel="auto">
           <input
             class="center-text"
             matInput
@@ -134,7 +134,7 @@
     <ng-container matColumnDef="limite_al_70">
       <mat-header-cell *matHeaderCellDef> Limite al 70% </mat-header-cell>
       <mat-cell *matCellDef="let element;" [formGroup]="element">
-        <mat-form-field floatLabel="never">
+        <mat-form-field floatLabel="auto">
           <input
             class="center-text"
             matInput
@@ -149,7 +149,7 @@
     <ng-container matColumnDef="limite_al_50">
       <mat-header-cell *matHeaderCellDef> Limite al 50% </mat-header-cell>
       <mat-cell *matCellDef="let element;" [formGroup]="element">
-        <mat-form-field floatLabel="never">
+        <mat-form-field floatLabel="auto">
           <input
             class="center-text"
             matInput
@@ -164,7 +164,7 @@
     <ng-container matColumnDef="limite_al_20">
       <mat-header-cell *matHeaderCellDef> Limite al 20% </mat-header-cell>
       <mat-cell *matCellDef="let element;" [formGroup]="element">
-        <mat-form-field floatLabel="never">
+        <mat-form-field floatLabel="auto">
           <input
             class="center-text"
             matInput
@@ -179,7 +179,7 @@
     <ng-container matColumnDef="media_tutte_emissioni">
       <mat-header-cell *matHeaderCellDef> Media su tutte le emissioni </mat-header-cell>
       <mat-cell *matCellDef="let element;" [formGroup]="element">
-        <mat-form-field floatLabel="never">
+        <mat-form-field floatLabel="auto">
           <input
             class="center-text"
             matInput

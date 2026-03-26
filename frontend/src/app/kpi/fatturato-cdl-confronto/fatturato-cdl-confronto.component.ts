@@ -6,11 +6,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'fatturato-cdl-confronto',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './fatturato-cdl-confronto.component.html',
-  styleUrls: ['./fatturato-cdl-confronto.component.scss']
+    selector: 'fatturato-cdl-confronto',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './fatturato-cdl-confronto.component.html',
+    styleUrls: ['./fatturato-cdl-confronto.component.scss']
 })
 export class FatturatoCdlConfrontoComponent extends AbstractKPIComponent {
   override name = 'fatturato-cdl-confronto';

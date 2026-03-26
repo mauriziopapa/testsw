@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'resa-carica-media',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './resa-carica-media.component.html',
-  styleUrls: ['./resa-carica-media.component.scss']
+    selector: 'resa-carica-media',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './resa-carica-media.component.html',
+    styleUrls: ['./resa-carica-media.component.scss']
 })
 export class ResaCaricaMediaComponent extends AbstractKPIComponent {
   override name = 'resa-carica-media';

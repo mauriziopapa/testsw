@@ -6,11 +6,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'fatturato-macroaree-confronto',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './fatturato-macroaree-confronto.component.html',
-  styleUrls: ['./fatturato-macroaree-confronto.component.scss']
+    selector: 'fatturato-macroaree-confronto',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './fatturato-macroaree-confronto.component.html',
+    styleUrls: ['./fatturato-macroaree-confronto.component.scss']
 })
 export class FatturatoMacroareeConfrontoComponent extends AbstractKPIComponent {
   override name = 'fatturato-macroaree-confronto';

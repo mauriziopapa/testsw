@@ -6,11 +6,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { KpiData } from 'src/app/models/kpi-data';
 
 @Component({
-  selector: 'nc-qualita',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './nc-qualita.component.html',
-  styleUrls: ['./nc-qualita.component.scss']
+    selector: 'nc-qualita',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './nc-qualita.component.html',
+    styleUrls: ['./nc-qualita.component.scss']
 })
 export class NCQualitaComponent extends AbstractKPIComponent {
   override name = 'nc-qualita';

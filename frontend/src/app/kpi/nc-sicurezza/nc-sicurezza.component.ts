@@ -6,11 +6,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { KpiData } from 'src/app/models/kpi-data';
 
 @Component({
-  selector: 'nc-sicurezza',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './nc-sicurezza.component.html',
-  styleUrls: ['./nc-sicurezza.component.scss']
+    selector: 'nc-sicurezza',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './nc-sicurezza.component.html',
+    styleUrls: ['./nc-sicurezza.component.scss']
 })
 export class NCSicurezzaComponent extends AbstractKPIComponent {
   override name = 'nc-sicurezza';

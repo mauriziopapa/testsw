@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'indebitamento-percentuale',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './indebitamento-percentuale.component.html',
-  styleUrls: ['./indebitamento-percentuale.component.scss']
+    selector: 'indebitamento-percentuale',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './indebitamento-percentuale.component.html',
+    styleUrls: ['./indebitamento-percentuale.component.scss']
 })
 export class IndebitamentoPercentualeComponent extends AbstractKPIComponent {
   override name = 'indebitamento-percentuale';

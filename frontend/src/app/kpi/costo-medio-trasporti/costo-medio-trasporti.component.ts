@@ -7,11 +7,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'costo-medio-trasporti',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './costo-medio-trasporti.component.html',
-  styleUrls: ['./costo-medio-trasporti.component.scss']
+    selector: 'costo-medio-trasporti',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './costo-medio-trasporti.component.html',
+    styleUrls: ['./costo-medio-trasporti.component.scss']
 })
 export class CostoMedioTrasportiComponent extends AbstractKPIComponent {
   override name = 'costo-medio-trasporti';

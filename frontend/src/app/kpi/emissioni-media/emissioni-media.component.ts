@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'emissioni-media',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './emissioni-media.component.html',
-  styleUrls: ['./emissioni-media.component.scss']
+    selector: 'emissioni-media',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './emissioni-media.component.html',
+    styleUrls: ['./emissioni-media.component.scss']
 })
 export class EmissioniMediaComponent extends AbstractKPIComponent {
   override name = 'emissioni-media';

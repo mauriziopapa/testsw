@@ -9,11 +9,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'laboratorio',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './laboratorio.component.html',
-  styleUrls: ['./laboratorio.component.scss']
+    selector: 'laboratorio',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './laboratorio.component.html',
+    styleUrls: ['./laboratorio.component.scss']
 })
 export class LaboratorioKpiComponent extends AbstractKPIComponent {
   override name = 'laboratorio';

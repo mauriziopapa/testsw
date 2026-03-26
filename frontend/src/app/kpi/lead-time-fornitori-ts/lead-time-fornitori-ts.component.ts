@@ -9,11 +9,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { ChartTarget } from 'src/app/models/chart-target';
 
 @Component({
-  selector: 'lead-time-fornitori-ts',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './lead-time-fornitori-ts.component.html',
-  styleUrls: ['./lead-time-fornitori-ts.component.scss']
+    selector: 'lead-time-fornitori-ts',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './lead-time-fornitori-ts.component.html',
+    styleUrls: ['./lead-time-fornitori-ts.component.scss']
 })
 export class LeadTimeFornitoriTSComponent extends AbstractKPIComponent {
   override name = 'lead-time-fornitori-ts';

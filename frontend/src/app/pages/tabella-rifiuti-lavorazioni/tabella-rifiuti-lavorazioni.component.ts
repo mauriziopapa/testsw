@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RifiutoLavorazione } from 'src/app/models/rifiuto-lavorazione';
 import { RifiutiService } from 'src/app/services/rifiuti.service';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'tabella-rifiuti-lavorazioni',
-  templateUrl: './tabella-rifiuti-lavorazioni.component.html',
-  styleUrls: ['./tabella-rifiuti-lavorazioni.component.scss']
+    selector: 'tabella-rifiuti-lavorazioni',
+    templateUrl: './tabella-rifiuti-lavorazioni.component.html',
+    styleUrls: ['./tabella-rifiuti-lavorazioni.component.scss'],
+    standalone: false
 })
 export class TabellaRifiutiLavorazioniComponent {
   dataSource: MatTableDataSource<RifiutoLavorazione>;

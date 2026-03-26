@@ -2,9 +2,10 @@ import { Component, Input } from '@angular/core';
 import { ChartData, ChartOptions } from 'chart.js';
 
 @Component({
-  selector: 'base-chart',
-  template: ` <p></p> `,
-  styles: []
+    selector: 'base-chart',
+    template: ` <p></p> `,
+    styles: [],
+    standalone: false
 })
 export class AbstractChartComponent {
   @Input() data: ChartData;

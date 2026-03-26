@@ -13,9 +13,10 @@ const PERC_INSOLUTI = 8;
 const PERC_SOFFERENZE = 9;
 
 @Component({
-  selector: 'tabella-dati-direzione',
-  templateUrl: './tabella-dati-direzione.component.html',
-  styleUrls: ['./tabella-dati-direzione.component.scss']
+    selector: 'tabella-dati-direzione',
+    templateUrl: './tabella-dati-direzione.component.html',
+    styleUrls: ['./tabella-dati-direzione.component.scss'],
+    standalone: false
 })
 export class TabellaDatiDirezioneComponent extends AbstractDataWithMonthsComponent {
   override tableName = 'tabella-direzione';

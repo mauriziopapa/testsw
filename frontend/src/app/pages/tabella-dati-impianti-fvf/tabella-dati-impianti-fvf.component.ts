@@ -6,9 +6,10 @@ import { TableFilters } from 'src/app/models/table-filters';
 import { FailSnackbarComponent } from 'src/app/shared/fail-snackbar/fail-snackbar.component';
 
 @Component({
-  selector: 'tabella-dati-impianti-fvf',
-  templateUrl: './tabella-dati-impianti-fvf.component.html',
-  styleUrls: ['./tabella-dati-impianti-fvf.component.scss']
+    selector: 'tabella-dati-impianti-fvf',
+    templateUrl: './tabella-dati-impianti-fvf.component.html',
+    styleUrls: ['./tabella-dati-impianti-fvf.component.scss'],
+    standalone: false
 })
 export class TabellaDatiImpiantiFVFComponent {
   tableName = 'tabella-impianti-fvf';

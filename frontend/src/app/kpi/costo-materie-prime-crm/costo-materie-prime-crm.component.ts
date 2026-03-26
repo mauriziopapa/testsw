@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'costo-materie-prime-crm',
-  standalone: true,
-  imports: [LineChartModule, SharedModule],
-  templateUrl: './costo-materie-prime-crm.component.html',
-  styleUrls: ['./costo-materie-prime-crm.component.scss']
+    selector: 'costo-materie-prime-crm',
+    imports: [LineChartModule, SharedModule],
+    templateUrl: './costo-materie-prime-crm.component.html',
+    styleUrls: ['./costo-materie-prime-crm.component.scss']
 })
 export class CostoMateriePrimeCRMComponent extends AbstractKPIComponent {
   override name = 'costo-materie-prime-crm';

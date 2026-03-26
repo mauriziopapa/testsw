@@ -6,11 +6,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { KpiData } from 'src/app/models/kpi-data';
 
 @Component({
-  selector: 'nc-ambiente',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './nc-ambiente.component.html',
-  styleUrls: ['./nc-ambiente.component.scss']
+    selector: 'nc-ambiente',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './nc-ambiente.component.html',
+    styleUrls: ['./nc-ambiente.component.scss']
 })
 export class NCAmbienteComponent extends AbstractKPIComponent {
   override name = 'nc-ambiente';

@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'mean-time-between-repair-reparti',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './mean-time-between-repair-reparti.component.html',
-  styleUrls: ['./mean-time-between-repair-reparti.component.scss']
+    selector: 'mean-time-between-repair-reparti',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './mean-time-between-repair-reparti.component.html',
+    styleUrls: ['./mean-time-between-repair-reparti.component.scss']
 })
 export class MeanTimeBetweenRepairRepartiComponent extends AbstractKPIComponent {
   override name = 'mean-time-between-repair-reparti';

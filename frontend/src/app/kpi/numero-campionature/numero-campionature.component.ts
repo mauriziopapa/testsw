@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'numero-campionature',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './numero-campionature.component.html',
-  styleUrls: ['./numero-campionature.component.scss']
+    selector: 'numero-campionature',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './numero-campionature.component.html',
+    styleUrls: ['./numero-campionature.component.scss']
 })
 export class NumeroCampionatureComponent extends AbstractKPIComponent {
   override name = 'numero-camp';

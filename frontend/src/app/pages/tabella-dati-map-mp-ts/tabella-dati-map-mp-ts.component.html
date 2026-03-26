@@ -7,7 +7,7 @@
     <ng-container matColumnDef="materia_prima">
       <mat-header-cell *matHeaderCellDef> Famiglia Materia Prima </mat-header-cell>
       <mat-cell *matCellDef="let element; let index = index" [formGroup]="element">
-        <mat-form-field class="column-width" floatLabel="never">
+        <mat-form-field class="column-width" floatLabel="auto">
           <input
             matInput
             placeholder="Famiglia Materia Prima"
@@ -30,7 +30,7 @@
     <ng-container matColumnDef="materia_prima_ts">
       <mat-header-cell *matHeaderCellDef> Materia Prima TS </mat-header-cell>
       <mat-cell *matCellDef="let element; let index = index" [formGroup]="element">
-        <mat-form-field class="column-width" floatLabel="never">
+        <mat-form-field class="column-width" floatLabel="auto">
           <input
             matInput
             placeholder="Materia Prima TS"
@@ -53,7 +53,7 @@
     <ng-container matColumnDef="materia_prima_ts_cod">
       <mat-header-cell *matHeaderCellDef> Codice Materia Prima TS </mat-header-cell>
       <mat-cell *matCellDef="let element; let index = index" [formGroup]="element">
-        <mat-form-field class="column-width" floatLabel="never">
+        <mat-form-field class="column-width" floatLabel="auto">
           <input
             matInput
             placeholder="Codice Materia Prima TS"
@@ -67,7 +67,7 @@
     <ng-container matColumnDef="fornitore_materia_prima_ts_cod">
       <mat-header-cell *matHeaderCellDef> Codice Fornitore Materia Prima TS </mat-header-cell>
       <mat-cell *matCellDef="let element; let index = index" [formGroup]="element">
-        <mat-form-field class="column-width" floatLabel="never">
+        <mat-form-field class="column-width" floatLabel="auto">
           <input
             matInput
             placeholder="Codice Fornitore Materia Prima TS"

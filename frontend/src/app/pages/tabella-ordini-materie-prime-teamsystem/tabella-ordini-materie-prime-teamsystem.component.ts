@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { TeamsystemOrdiniMateriePrime } from 'src/app/models/teamsystem-ordini-materie-prime';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { CurrencyPipe } from '@angular/common';
 import { OrdiniMateriePrimeTeamSystemService } from 'src/app/services/ordini-materie-prime-teamsystem.service';
 
 @Component({
-  selector: 'tabella-ordini-materie-prime-teamsystem',
-  templateUrl: './tabella-ordini-materie-prime-teamsystem.component.html',
-  styleUrls: ['./tabella-ordini-materie-prime-teamsystem.component.scss']
+    selector: 'tabella-ordini-materie-prime-teamsystem',
+    templateUrl: './tabella-ordini-materie-prime-teamsystem.component.html',
+    styleUrls: ['./tabella-ordini-materie-prime-teamsystem.component.scss'],
+    standalone: false
 })
 export class TabellaOrdiniMateriePrimeTeamSystemComponent {
   dataSource: MatTableDataSource<TeamsystemOrdiniMateriePrime>;

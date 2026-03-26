@@ -7,11 +7,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'valore-offerte-nel-tempo',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './valore-offerte-nel-tempo.component.html',
-  styleUrls: ['./valore-offerte-nel-tempo.component.scss']
+    selector: 'valore-offerte-nel-tempo',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './valore-offerte-nel-tempo.component.html',
+    styleUrls: ['./valore-offerte-nel-tempo.component.scss']
 })
 export class ValoreOfferteNelTempoComponent extends AbstractKPIComponent {
   override name = 'valore-offerte-nel-tempo';

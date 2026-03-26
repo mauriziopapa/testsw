@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppGuard } from 'src/app/helpers/app.guard';
+import { appGuard } from 'src/app/helpers/app.guard';
 import { TabellaDatiContatoriMisurazioniComponent } from './tabella-dati-contatori-misurazioni.component';
 
 const routes: Routes = [
-  { path: '', component: TabellaDatiContatoriMisurazioniComponent, canActivate: [AppGuard] }
+  { path: '', component: TabellaDatiContatoriMisurazioniComponent, canActivate: [appGuard] }
 ];
 
 @NgModule({

@@ -9,11 +9,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { KpiOptions } from 'src/app/models/kpi-options';
 
 @Component({
-  selector: 'mean-time-to-repair-LLF',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './mean-time-to-repair-LLF.component.html',
-  styleUrls: ['./mean-time-to-repair-LLF.component.scss']
+    selector: 'mean-time-to-repair-LLF',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './mean-time-to-repair-LLF.component.html',
+    styleUrls: ['./mean-time-to-repair-LLF.component.scss']
 })
 export class MeanTimeToRepairLLFComponent extends AbstractKPIComponent {
   override name = 'mean-time-to-repair-LLF';

@@ -4,9 +4,10 @@ import { RitardoManutenzioneService } from 'src/app/services/rit-manutenzione.se
 import { AbstractDataWithMonthsComponent } from '../abstract-table-data-with-months/abstract-table-data-with-months.component';
 
 @Component({
-  selector: 'tabella-dati-ritardo-manutenzione',
-  templateUrl: './tabella-dati-ritardo-manutenzione.component.html',
-  styleUrls: ['./tabella-dati-ritardo-manutenzione.component.scss']
+    selector: 'tabella-dati-ritardo-manutenzione',
+    templateUrl: './tabella-dati-ritardo-manutenzione.component.html',
+    styleUrls: ['./tabella-dati-ritardo-manutenzione.component.scss'],
+    standalone: false
 })
 export class TabellaDatiRitardoManutenzioneComponent extends AbstractDataWithMonthsComponent {
   override tableName = 'tabella-ritardo-manutenzione';

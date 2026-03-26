@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'lt-medio',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './lt-medio.component.html',
-  styleUrls: ['./lt-medio.component.scss']
+    selector: 'lt-medio',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './lt-medio.component.html',
+    styleUrls: ['./lt-medio.component.scss']
 })
 export class LTMedioComponent extends AbstractKPIComponent {
   override name = 'lt-medio';

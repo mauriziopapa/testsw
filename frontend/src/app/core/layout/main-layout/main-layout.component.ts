@@ -8,9 +8,10 @@ import { MenuVoice } from 'src/app/models/menu-voice';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'main-layout',
-  templateUrl: './main-layout.component.html',
-  styleUrls: ['./main-layout.component.scss']
+    selector: 'main-layout',
+    templateUrl: './main-layout.component.html',
+    styleUrls: ['./main-layout.component.scss'],
+    standalone: false
 })
 export class MainLayoutComponent implements OnInit, AfterViewInit {
   test = false;

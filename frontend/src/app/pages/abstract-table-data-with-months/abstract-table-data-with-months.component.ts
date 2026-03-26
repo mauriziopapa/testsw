@@ -5,9 +5,10 @@ import { TableFilters } from 'src/app/models/table-filters';
 import { FailSnackbarComponent } from 'src/app/shared/fail-snackbar/fail-snackbar.component';
 
 @Component({
-  selector: 'abstract-table',
-  template: ` <p></p> `,
-  styles: []
+    selector: 'abstract-table',
+    template: ` <p></p> `,
+    styles: [],
+    standalone: false
 })
 export abstract class AbstractDataWithMonthsComponent {
   tableName = '';

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppGuard } from 'src/app/helpers/app.guard';
+import { appGuard } from 'src/app/helpers/app.guard';
 import { TabellaRiepilogoClientiComponent } from './tabella-riepilogo-clienti.component';
 
 const routes: Routes = [
-  { path: '', component: TabellaRiepilogoClientiComponent, canActivate: [AppGuard] }
+  { path: '', component: TabellaRiepilogoClientiComponent, canActivate: [appGuard] }
 ];
 
 @NgModule({

@@ -9,11 +9,10 @@ import { AbstractKPIComponent } from '../abstract-kpi.component';
 import { ChartTarget } from 'src/app/models/chart-target';
 
 @Component({
-  selector: 'ritardo-medio-fornitori-ts',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './ritardo-medio-fornitori-ts.component.html',
-  styleUrls: ['./ritardo-medio-fornitori-ts.component.scss']
+    selector: 'ritardo-medio-fornitori-ts',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './ritardo-medio-fornitori-ts.component.html',
+    styleUrls: ['./ritardo-medio-fornitori-ts.component.scss']
 })
 export class RitardoMedioFornitoriTSComponent extends AbstractKPIComponent {
   override name = 'ritardo-medio-fornitori-ts';

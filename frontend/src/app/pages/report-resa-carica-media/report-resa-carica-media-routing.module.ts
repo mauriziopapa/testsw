@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppGuard } from 'src/app/helpers/app.guard';
+import { appGuard } from 'src/app/helpers/app.guard';
 import { ReportResaCaricaMediaComponent } from './report-resa-carica-media.component';
 
 const routes: Routes = [
-  { path: '', component: ReportResaCaricaMediaComponent, canActivate: [AppGuard] }
+  { path: '', component: ReportResaCaricaMediaComponent, canActivate: [appGuard] }
 ];
 
 @NgModule({

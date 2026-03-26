@@ -11,9 +11,10 @@ import { FailSnackbarComponent } from 'src/app/shared/fail-snackbar/fail-snackba
 import { SuccessSnackbarComponent } from 'src/app/shared/success-snackbar/success-snackbar.component';
 
 @Component({
-  selector: 'tabella-dati-emissioni',
-  templateUrl: './tabella-dati-emissioni.component.html',
-  styleUrls: ['./tabella-dati-emissioni.component.scss']
+    selector: 'tabella-dati-emissioni',
+    templateUrl: './tabella-dati-emissioni.component.html',
+    styleUrls: ['./tabella-dati-emissioni.component.scss'],
+    standalone: false
 })
 export class TabellaDatiEmissioniComponent {
   tableName = 'tabella-dati-emissioni';

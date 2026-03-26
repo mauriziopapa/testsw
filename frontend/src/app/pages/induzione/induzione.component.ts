@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { AbstractDashboardComponent } from '../abstract-dashboard/abstract-dashboard.component';
 
 @Component({
-  selector: 'induzione',
-  templateUrl: './induzione.component.html',
-  styleUrls: ['./induzione.component.scss']
+    selector: 'induzione',
+    templateUrl: './induzione.component.html',
+    styleUrls: ['./induzione.component.scss'],
+    standalone: false
 })
 export class InduzioneComponent extends AbstractDashboardComponent {
   /* override setKpiRowHeight() {

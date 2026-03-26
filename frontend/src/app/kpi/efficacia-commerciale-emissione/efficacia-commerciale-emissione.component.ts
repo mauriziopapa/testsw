@@ -10,11 +10,10 @@ import { Colors } from 'src/app/models/colors';
 import { ChartTarget } from 'src/app/models/chart-target';
 
 @Component({
-  selector: 'efficacia-commerciale-emissione',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './efficacia-commerciale-emissione.component.html',
-  styleUrls: ['./efficacia-commerciale-emissione.component.scss']
+    selector: 'efficacia-commerciale-emissione',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './efficacia-commerciale-emissione.component.html',
+    styleUrls: ['./efficacia-commerciale-emissione.component.scss']
 })
 export class EfficaciaCommercialeEmissioneComponent extends AbstractKPIComponent {
   override name = 'efficacia-commerciale-emissione';

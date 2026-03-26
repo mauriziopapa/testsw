@@ -9,11 +9,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'tasso-qualita',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './tasso-qualita.component.html',
-  styleUrls: ['./tasso-qualita.component.scss']
+    selector: 'tasso-qualita',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './tasso-qualita.component.html',
+    styleUrls: ['./tasso-qualita.component.scss']
 })
 export class TassoQualitaComponent extends AbstractKPIComponent {
   override name = 'tasso-qualita';

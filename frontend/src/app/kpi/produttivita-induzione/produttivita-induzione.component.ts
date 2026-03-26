@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'produttivita-induzione',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './produttivita-induzione.component.html',
-  styleUrls: ['./produttivita-induzione.component.scss']
+    selector: 'produttivita-induzione',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './produttivita-induzione.component.html',
+    styleUrls: ['./produttivita-induzione.component.scss']
 })
 export class ProduttivitaInduzioneComponent extends AbstractKPIComponent {
   override name = 'produttivita-induzione';

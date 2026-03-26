@@ -8,11 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'nc-logistica',
-  standalone: true,
-  imports: [BarChartModule, SharedModule],
-  templateUrl: './nc-logistica.component.html',
-  styleUrls: ['./nc-logistica.component.scss']
+    selector: 'nc-logistica',
+    imports: [BarChartModule, SharedModule],
+    templateUrl: './nc-logistica.component.html',
+    styleUrls: ['./nc-logistica.component.scss']
 })
 export class NCLogisticaComponent extends AbstractKPIComponent {
   override name = 'nc-logistica';

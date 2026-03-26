@@ -5,11 +5,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { FiltersService } from 'src/app/services/filters.service';
 
 @Component({
-  selector: 'report-acquisti',
-  standalone: true,
-  imports: [SharedModule],
-  templateUrl: './report-acquisti.component.html',
-  styleUrls: ['./report-acquisti.component.scss']
+    selector: 'report-acquisti',
+    imports: [SharedModule],
+    templateUrl: './report-acquisti.component.html',
+    styleUrls: ['./report-acquisti.component.scss']
 })
 export class ReportAcquistiComponent {
   name = 'report-acquisti';

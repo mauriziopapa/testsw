@@ -9,11 +9,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AbstractKPIComponent } from '../abstract-kpi.component';
 
 @Component({
-  selector: 'sintesi-impianti',
-  standalone: true,
-  imports: [StackedBarChartModule, SharedModule],
-  templateUrl: './sintesi-impianti.component.html',
-  styleUrls: ['./sintesi-impianti.component.scss']
+    selector: 'sintesi-impianti',
+    imports: [StackedBarChartModule, SharedModule],
+    templateUrl: './sintesi-impianti.component.html',
+    styleUrls: ['./sintesi-impianti.component.scss']
 })
 export class SintesiImpiantiComponent extends AbstractKPIComponent {
   override name = 'sintesi-impianti';

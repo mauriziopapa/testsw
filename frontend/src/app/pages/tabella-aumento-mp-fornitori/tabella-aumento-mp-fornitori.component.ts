@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { CurrencyPipe } from '@angular/common';
 import { FornitoriService } from 'src/app/services/fornitori.service';
 import { AumentoMpFornitore } from 'src/app/models/aumento-mp-fornitore';
 import { PercentagePipe } from 'src/app/shared/percent-pipe/percent.pipe';
 
 @Component({
-  selector: 'tabella-aumento-mp-fornitori',
-  templateUrl: './tabella-aumento-mp-fornitori.component.html',
-  styleUrls: ['./tabella-aumento-mp-fornitori.component.scss']
+    selector: 'tabella-aumento-mp-fornitori',
+    templateUrl: './tabella-aumento-mp-fornitori.component.html',
+    styleUrls: ['./tabella-aumento-mp-fornitori.component.scss'],
+    standalone: false
 })
 export class TabellaAumentoMpFornitoriComponent {
   dataSource: MatTableDataSource<AumentoMpFornitore>;

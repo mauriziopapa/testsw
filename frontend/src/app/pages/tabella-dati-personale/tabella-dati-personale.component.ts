@@ -20,9 +20,10 @@ const PERC_INFORTUNI = 21;
 const PERC_FORMAZIONE = 22;
 
 @Component({
-  selector: 'tabella-dati-personale',
-  templateUrl: './tabella-dati-personale.component.html',
-  styleUrls: ['./tabella-dati-personale.component.scss']
+    selector: 'tabella-dati-personale',
+    templateUrl: './tabella-dati-personale.component.html',
+    styleUrls: ['./tabella-dati-personale.component.scss'],
+    standalone: false
 })
 export class TabellaDatiPersonaleComponent extends AbstractDataWithMonthsComponent {
   override tableName = 'tabella-personale';
