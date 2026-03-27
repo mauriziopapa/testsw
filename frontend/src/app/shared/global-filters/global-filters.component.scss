@@ -9,11 +9,13 @@
   width: 100%;
 }
 
-.month-picker .mat-calendar-period-button {
+.month-picker .mat-calendar-period-button,
+.month-picker .mat-mdc-calendar-period-button {
   pointer-events: none;
 }
 
-.month-picker .mat-calendar-arrow {
+.month-picker .mat-calendar-arrow,
+.month-picker .mat-mdc-calendar-arrow {
   display: none;
 }
 

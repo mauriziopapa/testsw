@@ -3,11 +3,13 @@
   margin-top: 15px;
 }
 
-.month-picker .mat-calendar-period-button {
+.month-picker .mat-calendar-period-button,
+.month-picker .mat-mdc-calendar-period-button {
   pointer-events: none;
 }
 
-.month-picker .mat-calendar-arrow {
+.month-picker .mat-calendar-arrow,
+.month-picker .mat-mdc-calendar-arrow {
   display: none;
 }
 
@@ -36,7 +38,8 @@
   height: max-content;
 }
 
-.mat-stroked-button {
+.mat-stroked-button,
+.mat-mdc-outlined-button {
   min-width: 35px !important;
   padding-left: 0px;
   padding-right: 0px;
